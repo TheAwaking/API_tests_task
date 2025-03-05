@@ -1,7 +1,12 @@
-from pydantic import BaseModel, ConfigDict
+import requests
+
+from services.general.helpers.base_helper import BaseHelper
 
 
-class BaseGroup(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+class StudentHelper(BaseHelper):
+    ENDPOINT_PREFIX = "/students"
+    ROOT_ENDPOINT = f"{ENDPOINT_PREFIX}/"
 
-    name: str
+    def post_student(self, json: dict) -> requests.Response:
+        response = self.api_utils.post(self.ROOT_ENDPOINT, json=json)
+        return response
