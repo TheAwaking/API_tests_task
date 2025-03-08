@@ -86,3 +86,13 @@ def auth_api_utils_admin(access_token):
 def university_api_utils_admin(access_token):
     api_utils = ApiUtils(url=UniversityService.SERVICE_URL, headers={"Authorization": f"Bearer {access_token}"})
     return api_utils
+
+
+@pytest.fixture(scope="function", autouse=False)
+def ids(auth_api_utils_anonym):
+    auth_service = AuthService(auth_api_utils_anonym)
+    return {
+        "student_id": faker.uuid4(),
+        "teacher_id": faker.uuid4(),
+        "group_id": faker.uuid4()
+    }
