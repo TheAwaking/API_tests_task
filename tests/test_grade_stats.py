@@ -1,8 +1,11 @@
 import pytest
 import requests
+
+from logger.logger import Logger
 from utils.api_utils import ApiUtils
 from faker import Faker
 from services.university.university_service import UniversityService
+from university.models.base_grade import BaseGrade
 
 faker = Faker()
 
@@ -11,7 +14,8 @@ class TestStatisticsAPI:
 
     def test_statistics(self, ids, university_api_utils_admin):
         endpoint = ApiUtils(url=UniversityService.SERVICE_URL)
-        api_key = UniversityService(api_utils=university_api_utils_admin)
+        api_key = ids(api_utils=university_api_utils_admin)
+        Logger.info("### Steps 1. Create ids")
         params = {
             "student_id": ids["student_id"],
             "teacher_id": ids["teacher_id"],
@@ -21,8 +25,6 @@ class TestStatisticsAPI:
         response = requests.get(endpoint, params=params)
         assert response.status_code == 200, f"Expected status code 200, got {response.status_code}"
 
-        response_json = response.json()
-        assert response_json["count"] == 3, "'count' should be 3"
-        assert response_json["min"] == 2, "'min' should be 2"
-        assert response_json["max"] == 5, "'max' should be 5"
-        assert response_json["avg"] == 3.75, "'avg' should be 3.75"
+        response_json = api_key.create_grades(grade_request=ids)
+        assert response_json.BaseGrade == ids.id, \
+            f"Wrong group id. Actual: '{response_json.group_id}', but expected: '{ids.id}'"

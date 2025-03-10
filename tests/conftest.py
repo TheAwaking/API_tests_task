@@ -37,8 +37,9 @@ def university_service_readiness():
         try:
             response = requests.get(UniversityService.SERVICE_URL + "/docs")
             response.raise_for_status()
-        except:
-            time.sleep(1)  # try again in 1 second
+        except requests.exceptions.Timeout as e:
+            print("Request timed out:", e)
+            time.sleep(1)
         else:
             break
     else:
@@ -92,7 +93,7 @@ def university_api_utils_admin(access_token):
 def ids(auth_api_utils_anonym):
     auth_service = AuthService(auth_api_utils_anonym)
     return {
-        "student_id": faker.uuid4(),
-        "teacher_id": faker.uuid4(),
-        "group_id": faker.uuid4()
+        "student_id": faker.random_int(min=1, max=100),  # нам нужно в id числа?
+        "teacher_id": faker.random_int(min=1, max=100),
+        "group_id": faker.random_int(min=1, max=100)
     }

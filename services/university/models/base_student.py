@@ -19,13 +19,3 @@ class BaseStudent(BaseModel):
     degree: DegreeEnum
     phone: str
     group_id: int
-
-class BaseGrade(BaseModel):
-    model_config = ConfigDict(extra="forbid")
-
-    count: int
-    min: int
-    max: int
-    avg: int
-
-
