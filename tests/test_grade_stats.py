@@ -2,29 +2,33 @@ import pytest
 import requests
 
 from logger.logger import Logger
+from services.university.helpers.grade_helper import GradeHelper
 from utils.api_utils import ApiUtils
-from faker import Faker
 from services.university.university_service import UniversityService
-from university.models.base_grade import BaseGrade
-
-faker = Faker()
 
 
 class TestStatisticsAPI:
+    ENDPOINT = "http://127.0.0.1:8001"
 
-    def test_statistics(self, ids, university_api_utils_admin):
-        endpoint = ApiUtils(url=UniversityService.SERVICE_URL)
-        api_key = ids(api_utils=university_api_utils_admin)
-        Logger.info("### Steps 1. Create ids")
-        params = {
-            "student_id": ids["student_id"],
-            "teacher_id": ids["teacher_id"],
-            "group_id": ids["group_id"]
+    def test_can_create_task():
+        payload = {
+            "count": 3,
+            "min": 2,
+            "max": 5,
+            "avg": 3.75
         }
+        response = requests.get(ENDPOINT + "/grades/stats", json=payload)
+        assert response.status_code == 200
 
-        response = requests.get(endpoint, params=params)
-        assert response.status_code == 200, f"Expected status code 200, got {response.status_code}"
+        data = response.json()
+        student_id = data["student_id"]
+        teacher_id = data["teacher_id"]
+        group_id = data["group_id"]
+        get_response = requests.get(ENDPOINT + "/grades/stats")
 
-        response_json = api_key.create_grades(grade_request=ids)
-        assert response_json.BaseGrade == ids.id, \
-            f"Wrong group id. Actual: '{response_json.group_id}', but expected: '{ids.id}'"
+        assert get_response.status_code == 200
+        get_grades_data = get_response.json()
+        assert get_grades_data["count"] == payload["count"]
+        assert get_grades_data["min"] == payload["min"]
+        assert get_grades_data["max"] == payload["max"]
+        assert get_grades_data["avg"] == payload["avg"]
