@@ -88,12 +88,23 @@ def university_api_utils_admin(access_token):
     api_utils = ApiUtils(url=UniversityService.SERVICE_URL, headers={"Authorization": f"Bearer {access_token}"})
     return api_utils
 
+@pytest.fixture(scope="function", autouse=False)
+def headers(access_token):
+    return {
+        "Authorization": f"Bearer {access_token}"
+    }
 
 @pytest.fixture(scope="function", autouse=False)
-def ids(auth_api_utils_anonym):
-    auth_service = AuthService(auth_api_utils_anonym)
-    return {
-        "student_id": faker.random_int(min=1, max=100),  # нам нужно в id числа?
-        "teacher_id": faker.random_int(min=1, max=100),
-        "group_id": faker.random_int(min=1, max=100)
+def setup(access_token):
+
+    ENDPOINT = "http://127.0.0.1:8001"
+
+    fake = Faker()
+    yield {
+        "endpoint": ENDPOINT,
+        "fake": fake,
+        "access_token": access_token
     }
+
+
+
