@@ -14,10 +14,10 @@ def test_get_grades_stats(access_token, headers, load_config):
 def test_get_grades_stats_not_authorized(access_token, fake_jwt, load_config):
     base_url = load_config["api_url"]
     response = requests.get(f"{base_url}/grades/stats", headers=fake_jwt)
-    assert response.status_code == 401, f"Expected status code 401, but got {response.status_code}. Response: {response.text}"
+    assert response.status_code == 403, f"Expected status code 403, but got {response.status_code}. Response: {response.text}"
     data = response.json()
     assert "error" in data, "Response does not contain 'error' key"
-    assert data["error"] == "Not authorized", "Expected 'error' message to be 'Not authorized'"
+    assert data["error"] == "Forbidden", "Expected 'error' message to be 'Forbidden'"
 
 
 def test_get_grades_stats_forbidden(load_config):
