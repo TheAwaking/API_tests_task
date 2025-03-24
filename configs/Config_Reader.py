@@ -13,5 +13,4 @@ class ConfigReader:
             return json.load(f)
 
     def get_key(self, key, default=None):
-        """Получить значение по ключу с явным указанием значения по умолчанию."""
         return self.config_data.get(key, default)

@@ -5,21 +5,21 @@ from configs.Config_Reader import ConfigReader
 fake = Faker()
 
 
-def test_get_grades_stats(access_token, headers, load_config):
+def test_get_grades_stats(access_token, headers):
     config_reader = ConfigReader("config.json")
     base_url = config_reader.get_key("api_url")
     response = requests.get(f"{base_url}/grades/stats", headers=headers)
     assert response.status_code == 200, f"Expected status code 200, but got {response.status_code}. Response: {response.text}"
 
 
-def test_get_grades_stats_not_authorized(access_token, fake_jwt, load_config):
+def test_get_grades_stats_not_authorized(access_token, fake_jwt):
     config_reader = ConfigReader("config.json")
     base_url = config_reader.get_key("api_url")
     response = requests.get(f"{base_url}/grades/stats", headers=fake_jwt)
     assert response.status_code == 401, f"Expected status code 401, but got {response.status_code}. Response: {response.text}"
 
 
-def test_get_grades_stats_authorization_error_message(access_token, fake_jwt, load_config):
+def test_get_grades_stats_authorization_error_message(access_token, fake_jwt):
     config_reader = ConfigReader("config.json")
     base_url = config_reader.get_key("api_url")
     response = requests.get(f"{base_url}/grades/stats", headers=fake_jwt)
@@ -28,14 +28,14 @@ def test_get_grades_stats_authorization_error_message(access_token, fake_jwt, lo
     assert data["error"] == "Not authorized", "Expected 'error' message to be 'Not authorized'"
 
 
-def test_get_grades_stats_no_token(access_token, load_config):
+def test_get_grades_stats_no_token(access_token):
     config_reader = ConfigReader("config.json")
     base_url = config_reader.get_key("api_url")
     response = requests.get(f"{base_url}/grades/stats")
     assert response.status_code == 401, f"Expected status code 401, but got {response.status_code}. Response: {response.text}"
 
 
-def test_get_grades_stats_no_token_error_message(access_token, load_config):
+def test_get_grades_stats_no_token_error_message(access_token):
     config_reader = ConfigReader("config.json")
     base_url = config_reader.get_key("api_url")
     response = requests.get(f"{base_url}/grades/stats")
@@ -44,7 +44,7 @@ def test_get_grades_stats_no_token_error_message(access_token, load_config):
     assert data["error"] == "Not authorized", "Expected 'error' message to be 'Not authorized'"
 
 
-def test_get_grades_stats_validation_error(access_token, headers, load_config):
+def test_get_grades_stats_validation_error(access_token, headers):
     config_reader = ConfigReader("config.json")
     base_url = config_reader.get_key("api_url")
     payload = {'student_id': 'not'}
@@ -52,7 +52,7 @@ def test_get_grades_stats_validation_error(access_token, headers, load_config):
     assert response.status_code == 422, f"Expected status code 422, but got {response.status_code}. Response: {response.text}"
 
 
-def test_get_grades_stats_validation_error_message(access_token, headers, load_config):
+def test_get_grades_stats_validation_error_message(access_token, headers):
     config_reader = ConfigReader("config.json")
     base_url = config_reader.get_key("api_url")
     payload = {'student_id': 'not'}
@@ -62,7 +62,7 @@ def test_get_grades_stats_validation_error_message(access_token, headers, load_c
     assert data["error"] == "Validation Error", "Expected 'error' message to indicate Validation Error"
 
 
-def test_create_grade(student, teacher, access_token, headers, load_config):
+def test_create_grade(student, teacher, access_token, headers):
     config_reader = ConfigReader("config.json")
     base_url = config_reader.get_key("api_url")
 
@@ -75,14 +75,14 @@ def test_create_grade(student, teacher, access_token, headers, load_config):
     assert response.status_code == 201, f"Expected status code 201, but got {response.status_code}. Response: {response.text}"
 
 
-def test_get_grades(access_token, headers, load_config):
+def test_get_grades(access_token, headers):
     config_reader = ConfigReader("config.json")
     base_url = config_reader.get_key("api_url")
     response = requests.get(f"{base_url}/grades/", headers=headers)
     assert response.status_code == 200, f"Expected status code 200, but got {response.status_code}. Response: {response.text}"
 
 
-def test_delete_group(group, access_token, headers, load_config):
+def test_delete_group(group, access_token, headers):
     config_reader = ConfigReader("config.json")
     base_url = config_reader.get_key("api_url")
     group_id = group
@@ -91,7 +91,7 @@ def test_delete_group(group, access_token, headers, load_config):
     assert response.status_code == 200, f"Expected status code 200, but got {response.status_code}. Response: {response.text}"
 
 
-def test_delete_group_verification_after_delete(group, access_token, headers, load_config):
+def test_delete_group_verification_after_delete(group, access_token, headers):
     config_reader = ConfigReader("config.json")
     base_url = config_reader.get_key("api_url")
     group_id = group

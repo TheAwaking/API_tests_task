@@ -1,13 +1,10 @@
 import time
 import jwt
-from datetime import datetime, timedelta
-import secrets
 import pytest
 import requests
 
 from faker import Faker
 
-from configs.Config_Reader import config
 from services.auth.auth_service import AuthService
 from services.auth.models.login_request import LoginRequest
 from services.auth.models.register_request import RegisterRequest
@@ -109,11 +106,6 @@ def fake_jwt():
     return {
         "Authorization": f"Bearer {encoded}"
     }
-
-
-@pytest.fixture
-def load_config():
-    return config()
 
 
 @pytest.fixture(scope="function", autouse=False)
