@@ -7,7 +7,7 @@ import requests
 
 from faker import Faker
 
-from configs.ConfigReader import config
+from configs.Config_Reader import config
 from services.auth.auth_service import AuthService
 from services.auth.models.login_request import LoginRequest
 from services.auth.models.register_request import RegisterRequest
@@ -15,8 +15,6 @@ from services.university.university_service import UniversityService
 from utils.api_utils import ApiUtils
 
 faker = Faker()
-
-SECRET_KEY = secrets.token_hex(32)  # гененрирую ключ 64-х знач
 
 
 @pytest.fixture(scope="session", autouse=True)
@@ -104,15 +102,12 @@ def headers(access_token):
 
 @pytest.fixture(scope="function", autouse=False)
 def fake_jwt():
-    payload = {
-        "sub": "user_id",
-        "exp": datetime.utcnow() + timedelta(minutes=30),
-        "iat": datetime.utcnow(),
-        "roles": ["user"]
-    }
-    encoded_jwt = jwt.encode(payload, SECRET_KEY, algorithm="HS256")  # создаю токен из ключа
+    key = "secret"
+    encoded = jwt.encode({"some": "payload"}, key, algorithm="HS256")
+    decoded = jwt.decode(encoded, key, algorithms=["HS256"])
+
     return {
-        "Authorization": f"Bearer {encoded_jwt}"
+        "Authorization": f"Bearer {encoded}"
     }
 
 
@@ -163,47 +158,3 @@ def teacher(headers):
     response_teacher = requests.post(api_utils.url + "/teachers/", headers=headers, json=payload_teacher)
     teacher_id = response_teacher.json().get("id")
     yield teacher_id
-
-
-@pytest.fixture(scope="function", autouse=False)
-def setup_class(student, teacher):
-    student_id = student
-    teacher_id = teacher
-
-    return {
-        "student_id": student_id,
-        "teacher_id": teacher_id
-    }
-
-# @pytest.fixture(scope="function",
-#                 autouse=False)
-# def wrong_access_token(auth_api_utils_anonym):
-#     auth_service = AuthService(auth_api_utils_anonym)
-#     username = faker.user_name()
-#     password = faker.password(length=30, special_chars=True, digits=True, upper_case=True, lower_case=True)
-#
-#     auth_service.register_user(
-#         register_request=RegisterRequest(
-#             username=username,
-#             password=password,
-#             password_repeat=password,
-#             email=faker.email()
-#         )
-#     )
-#
-#     wrong_username = faker.word()
-#
-#     login_response = auth_service.login_user(LoginRequest(username=wrong_username, password=password))
-#     return login_response.access_token
-
-
-# @pytest.fixture(scope="function", autouse=False)
-# def setup_delete(access_token, headers):
-#     api_utils = ApiUtils(url=UniversityService.SERVICE_URL)
-#     payload_group = {
-#         "name": faker.word()
-#
-#     }
-#     response = requests.post(api_utils.url + "/groups/", headers=headers, json=payload_group)
-#     group_id = response.json().get("id")
-#     return group_id
