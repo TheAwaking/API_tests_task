@@ -24,6 +24,7 @@ def test_get_grades_stats_authorization_error_message(access_token, fake_jwt):
     base_url = config_reader.get_key("api_url")
     response = requests.get(f"{base_url}/grades/stats", headers=fake_jwt)
     data = response.json()
+
     assert "error" in data, "Response does not contain 'error' key"
     assert data["error"] == "Not authorized", "Expected 'error' message to be 'Not authorized'"
 
