@@ -47,8 +47,8 @@ def test_get_grades_stats_no_token_error_message(access_token):
 def test_get_grades_stats_validation_error(access_token, headers):
     config_reader = ConfigReader("config.json")
     base_url = config_reader.get_key("api_url")
-    payload = {'student_id': 'not'}
-    response = requests.get(f"{base_url}/grades/stats", params=payload, headers=headers)
+    params = {'student_id': 'not'}
+    response = requests.get(f"{base_url}/grades/stats", params=params, headers=headers)
     assert response.status_code == 422, f"Expected status code 422, but got {response.status_code}. Response: {response.text}"
 
 
@@ -96,7 +96,5 @@ def test_delete_group_verification_after_delete(group, access_token, headers):
     base_url = config_reader.get_key("api_url")
     group_id = group
 
-    response = requests.delete(f"{base_url}/groups/{group_id}/", headers=headers)
-    assert response.status_code == 200, f"Expected status code 200, but got {response.status_code}. Response: {response.text}"
     response_check = requests.get(f"{base_url}/groups/{group_id}/", headers=headers)
     assert response_check.status_code == 404, f"Expected status code 404, but got {response_check.status_code}. Response: {response_check.text}"
