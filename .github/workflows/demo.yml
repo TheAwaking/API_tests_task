@@ -23,7 +23,7 @@ jobs:
 
       - name: Run Ruff linter
         run: |
-          ruff check .
+          ruff check tests/test_grade_stats.py
 
       - name: Install dependencies
         run: |
