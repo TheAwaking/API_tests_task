@@ -4,18 +4,18 @@ on:
   push
 
 jobs:
-  lint:
-    name: Run linters
-    runs-on: ubuntu-latest
+#   lint:
+#     name: Run linters
+#     runs-on: ubuntu-latest
     
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v3
+#     steps:
+#       - name: Check out code
+#         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.12'
+#       - name: Set up Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: '3.12'
 
       # - name: Install dependencies
       #   run: |
