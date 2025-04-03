@@ -5,7 +5,7 @@ from .helpers.group_helper import GroupHelper
 from .helpers.student_helper import StudentHelper
 from .models.group_request import GroupRequest
 from .models.group_response import GroupResponse
-from .models.grade import StudentGrade, Grade
+
 from .models.student_request import StudentRequest
 from .models.student_response import StudentResponse
 
@@ -19,7 +19,6 @@ class UniversityService(BaseService):
         self.group_helper = GroupHelper(self.api_utils)
         self.student_helper = StudentHelper(self.api_utils)
         self.grade_helper = GradeHelper(self.api_utils)
-
 
     def create_group(self, group_request: GroupRequest) -> GroupResponse:
         response = self.group_helper.post_group(json=group_request.model_dump())
@@ -35,7 +34,3 @@ class UniversityService(BaseService):
 
     def create_random_group(self):
         raise NotImplementedError
-
-    def create_grades(self, grade_request: Grade):
-        response = self.student_helper.post_student(json=grade_request.model_dump())
-        return StudentResponse(**response.json())

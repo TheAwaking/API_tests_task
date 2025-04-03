@@ -135,6 +135,7 @@ def student(headers):
         "group_id": 1
     }
     response_student = requests.post(api_utils.url + "/students/", headers=headers, json=payload_student)
+
     student_id = response_student.json().get("id")
     yield student_id
 
