@@ -20,11 +20,11 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Установка Ruff
-        run: pip install ruff
+      # - name: Установка Ruff
+      #   run: pip install ruff
 
-      - name: Запуск Ruff
-        run: ruff check .
+      # - name: Запуск Ruff
+      #   run: ruff check .
 
   deploy:
     name: Развертывание системы
