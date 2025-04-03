@@ -1,9 +1,7 @@
 name: Demo Workflow
 
 on:
-  pull_request:
-    branches:
-      - main
+  push:
 
 jobs:
   linter:
