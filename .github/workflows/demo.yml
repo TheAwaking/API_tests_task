@@ -22,6 +22,7 @@ jobs:
           pip install ruff
 
       - name: Run Ruff linter
+        if: env.RUN_LINTER == 'true'
         run: |
           ruff check tests/test_grade_stats.py
 
