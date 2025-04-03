@@ -7,6 +7,21 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    jobs:
+      test:
+        runs-on: ubuntu-latest
+
+        services:
+          auth_service:
+            image: mekidmetal/auth-service:latest  # Укажите образ вашего сервиса аутентификации
+            ports:
+              - 8000
+            options: >-
+              --health-cmd "curl --fail http://127.0.0.1:8000/docs#/"
+              --health-interval 10s
+              --health-timeout 5s
+              --health-retries 3
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
