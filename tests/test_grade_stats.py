@@ -96,6 +96,6 @@ def test_delete_group_verification_after_delete(group, access_token, headers):
     config_reader = ConfigReader()
     base_url = config_reader.get_key("api_url")
     group_id = group
-    response = requests.delete(f"{base_url}/groups/{group_id}/", headers=headers)
+    requests.delete(f"{base_url}/groups/{group_id}/", headers=headers)
     response_check = requests.get(f"{base_url}/groups/{group_id}/", headers=headers)
     assert response_check.status_code == 404, f"Expected status code 404, but got {response_check.status_code}. Response: {response_check.text}"

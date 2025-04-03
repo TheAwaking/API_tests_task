@@ -1,7 +1,6 @@
 import requests
 
 from services.general.helpers.base_helper import BaseHelper
-from utils.api_utils import ApiUtils
 
 
 class AuthorizationHelper(BaseHelper):

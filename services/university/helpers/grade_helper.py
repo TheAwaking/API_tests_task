@@ -1,5 +1,3 @@
-import requests
-
 from services.general.helpers.base_helper import BaseHelper
 
 
