@@ -72,8 +72,7 @@ jobs:
 
       - name: Run tests in Docker
         run: |
-          docker run --network host 61d655922e7e60c8fe347431cba99bca18e2b7abd3718679483e8d5729a81327
-
+          docker run --network host 61d655922e7e
       - name: Generate Allure report
         run: |
           allure serve ./allure-results
