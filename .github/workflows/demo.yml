@@ -1,8 +1,26 @@
 name: Demo Workflow
-on: workflow_dispatch
+
+on: push
+
 jobs:
-  print: 
-    runs-on:ubuntu-latest
+  test:
+    name: Run tests
+    runs-on: ubuntu-latest
+
+    container:
+      image: python:3.12
+      options: --user
+
     steps:
-      - name: Print to console
-      run: echo Hello GH Actions!
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          pytest tests/test_grade_stats.py
+    
