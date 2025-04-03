@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  my_service_1:
+    image: mekidmetal/university-service:latest
+    networks:
+      - my_network
+
+  my_service_2:
+    image: mekidmetal/auth-service:latest
+    networks:
+      - my_network
+
+networks:
+  my_network:
