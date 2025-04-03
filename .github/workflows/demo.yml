@@ -23,7 +23,7 @@ jobs:
 
       - name: Run Ruff linter
         run: |
-          ruff .
+          ruff check .
 
       - name: Install dependencies
         run: |
