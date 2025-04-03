@@ -7,6 +7,8 @@ jobs:
   lint:
     name: Run linters
     runs-on: ubuntu-latest
+    env:
+      RUN_LINTER: false
 
     steps:
       - name: Check out code
@@ -17,12 +19,11 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install Ruff
-        run: |
-          pip install ruff
+      # - name: Install Ruff
+      #   run: |
+      #     pip install ruff
 
       # - name: Run Ruff linter
-      #   if: env.RUN_LINTER == 'false'
       #   run: |
       #     ruff check tests/test_grade_stats.py
 
