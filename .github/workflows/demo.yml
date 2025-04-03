@@ -72,7 +72,7 @@ jobs:
 
       - name: Run tests in Docker
         run: |
-          docker run --network host 4e7024df2f20
+          docker run --network host sha256:4e7024df2f2099e87d0a41893c299230d2a974c3474e681b0996f141951f9817
       - name: Generate Allure report
         run: |
           allure serve ./allure-results
