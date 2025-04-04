@@ -36,7 +36,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-            docker build -t test-image -f app/Dockerfile
+            docker buildx build -t test-image -f app/Dockerfile app/
 
       - name: Run Docker Compose
         run: |
