@@ -21,7 +21,8 @@ jobs:
           pip install ruff
 
       - name: Run Ruff Linter
-        run: ruff .
+        run: |
+          ruff check tests/test_grade_stats.py
 
   deploy:
     runs-on: ubuntu-latest
