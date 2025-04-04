@@ -38,9 +38,14 @@ jobs:
         run: |
             docker buildx build -t test-image -f app/Dockerfile .
 
-      - name: Run Docker Compose
+      - name: Install Docker Compose
         run: |
-          docker-compose up -d
+            sudo apt-get update
+            sudo apt-get install -y docker-compose
+
+      - name: Build and run Docker Compose
+        run: |
+            docker-compose up -d
 
       - name: Wait for services to be ready
         run: |
