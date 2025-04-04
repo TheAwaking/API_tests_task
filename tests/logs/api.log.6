@@ -1,0 +1,967 @@
+[2025-03-06 12:11:07,215 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 26' -H 'Content-Type: application/json' -H 'User-Agent: python-requests/2.32.3' -d '{"name": "Jason Anderson"}' http://127.0.0.1:8001/groups/
+[2025-03-06 12:11:07,216 - INFO] - Response status code='403', elapsed_time='0:00:00.006317'
+
+{
+  "detail": "Access denied"
+}
+
+[2025-03-06 12:11:16,507 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 145' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=rodgersrebecca&password=rexvrVMnC5gF0HXS3P47MJNB%21UnjCC&password_repeat=rexvrVMnC5gF0HXS3P47MJNB%21UnjCC&email=virginia91%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-06 12:11:16,508 - INFO] - Response status code='201', elapsed_time='0:00:00.259425'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-06 12:11:16,819 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 65' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=rodgersrebecca&password=rexvrVMnC5gF0HXS3P47MJNB%21UnjCC' http://127.0.0.1:8000/auth/login/
+[2025-03-06 12:11:16,819 - INFO] - Response status code='200', elapsed_time='0:00:00.266728'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoicm9kZ2Vyc3JlYmVjY2EiLCJleHAiOjE3NDEyNTk0NzYsImlhdCI6MTc0MTI1MjI3Nn0.XjW60GTyPUCxDDXOxvye2Y0NmUfjEufvyoMr6kFXKhJVYusgst-aB-_-S2OS3TNNgJK2LaEP2MItn66lCRG-D7Pps_cjmYXJxKNiDNRsD2UfVypWfsCqia_3PU2sJ24_W9xX9DttgVOkH-pzhQrUrvq5z0lARE5gijhsZdmZqTFUVz9HbrmbZV7FkHXC3qDD5kLSlS-g50QOoVZu66RpbvytyO-qKRWyIMvEWqXaJ-k6KX4Fu11YNQAGDkSR7nzhZXzoIcFasBv80_bT102VO0oAo4vn-KV2gdbzPqTMp5VuLv0IcSTg4d3Ioy9NIeVFfCHW2GQP_qk7q_iAjVhKPg",
+  "token_type": "Bearer"
+}
+
+[2025-03-06 12:11:16,820 - INFO] - ### Steps 1. Create group
+[2025-03-06 12:11:16,858 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoicm9kZ2Vyc3JlYmVjY2EiLCJleHAiOjE3NDEyNTk0NzYsImlhdCI6MTc0MTI1MjI3Nn0.XjW60GTyPUCxDDXOxvye2Y0NmUfjEufvyoMr6kFXKhJVYusgst-aB-_-S2OS3TNNgJK2LaEP2MItn66lCRG-D7Pps_cjmYXJxKNiDNRsD2UfVypWfsCqia_3PU2sJ24_W9xX9DttgVOkH-pzhQrUrvq5z0lARE5gijhsZdmZqTFUVz9HbrmbZV7FkHXC3qDD5kLSlS-g50QOoVZu66RpbvytyO-qKRWyIMvEWqXaJ-k6KX4Fu11YNQAGDkSR7nzhZXzoIcFasBv80_bT102VO0oAo4vn-KV2gdbzPqTMp5VuLv0IcSTg4d3Ioy9NIeVFfCHW2GQP_qk7q_iAjVhKPg' -H 'Connection: keep-alive' -H 'Content-Length: 23' -H 'Content-Type: application/json' -H 'User-Agent: python-requests/2.32.3' -d '{"name": "Shaun Huber"}' http://127.0.0.1:8001/groups/
+[2025-03-06 12:11:16,859 - INFO] - Response status code='201', elapsed_time='0:00:00.037596'
+
+{
+  "name": "Shaun Huber",
+  "id": 1
+}
+
+[2025-03-06 12:11:16,859 - INFO] - ### Steps 1. Create student
+[2025-03-06 12:11:16,929 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoicm9kZ2Vyc3JlYmVjY2EiLCJleHAiOjE3NDEyNTk0NzYsImlhdCI6MTc0MTI1MjI3Nn0.XjW60GTyPUCxDDXOxvye2Y0NmUfjEufvyoMr6kFXKhJVYusgst-aB-_-S2OS3TNNgJK2LaEP2MItn66lCRG-D7Pps_cjmYXJxKNiDNRsD2UfVypWfsCqia_3PU2sJ24_W9xX9DttgVOkH-pzhQrUrvq5z0lARE5gijhsZdmZqTFUVz9HbrmbZV7FkHXC3qDD5kLSlS-g50QOoVZu66RpbvytyO-qKRWyIMvEWqXaJ-k6KX4Fu11YNQAGDkSR7nzhZXzoIcFasBv80_bT102VO0oAo4vn-KV2gdbzPqTMp5VuLv0IcSTg4d3Ioy9NIeVFfCHW2GQP_qk7q_iAjVhKPg' -H 'Connection: keep-alive' -H 'Content-Length: 145' -H 'Content-Type: application/json' -H 'User-Agent: python-requests/2.32.3' -d '{"first_name": "John", "last_name": "Huffman", "email": "jessicasmith@example.com", "degree": "Bachelor", "phone": "+73910535112", "group_id": 1}' http://127.0.0.1:8001/students/
+[2025-03-06 12:11:16,929 - INFO] - Response status code='201', elapsed_time='0:00:00.018788'
+
+{
+  "first_name": "John",
+  "last_name": "Huffman",
+  "email": "jessicasmith@example.com",
+  "degree": "Bachelor",
+  "phone": "+73910535112",
+  "group_id": 1,
+  "id": 1
+}
+
+[2025-03-06 12:11:28,816 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 31' -H 'Content-Type: application/json' -H 'User-Agent: python-requests/2.32.3' -d '{"name": "Christian Castaneda"}' http://127.0.0.1:8001/groups/
+[2025-03-06 12:11:28,816 - INFO] - Response status code='403', elapsed_time='0:00:00.002293'
+
+{
+  "detail": "Access denied"
+}
+
+[2025-03-06 12:11:48,587 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 30' -H 'Content-Type: application/json' -H 'User-Agent: python-requests/2.32.3' -d '{"name": "Dr. Melanie Vargas"}' http://127.0.0.1:8001/groups/
+[2025-03-06 12:11:48,588 - INFO] - Response status code='403', elapsed_time='0:00:00.002378'
+
+{
+  "detail": "Access denied"
+}
+
+[2025-03-06 14:14:06,311 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 167' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=daniel55&password=%259i%29CVP%28w7sHzvb6QKO%40%26Cwn%29%2B_O%282&password_repeat=%259i%29CVP%28w7sHzvb6QKO%40%26Cwn%29%2B_O%282&email=russosarah%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-06 14:14:06,311 - INFO] - Response status code='201', elapsed_time='0:00:00.231544'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-06 14:14:06,631 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 73' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=daniel55&password=%259i%29CVP%28w7sHzvb6QKO%40%26Cwn%29%2B_O%282' http://127.0.0.1:8000/auth/login/
+[2025-03-06 14:14:06,631 - INFO] - Response status code='200', elapsed_time='0:00:00.270422'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiZGFuaWVsNTUiLCJleHAiOjE3NDEyNjY4NDYsImlhdCI6MTc0MTI1OTY0Nn0.OQPkRavJMqcdIBP7xOnu9oL9B8k2XJu2XyabhBE01N65YZBD3OjAQrl2ffHHQtdMngaj29dwzPTtOYbpOaNtUxa1Q0UiGDroipFQzCU09TAeIQgksNZWD2XCAuEpQoQLi-LLFMiS6ThCrhy-3Ll9MLP1z_GZ3RWLFoTojeNwzRCxVbwWI-xEe-nu6ZJuALNhfZ9hjW5Se7dis31MPZ3gA6By0V5ztrPRm841eXPHhYjaf5dYW0alMyjRvsYWBy7sUiqteEVDDa_r2i4NZC9wilJZL2LfLIsNh_gc_KeRFgMThpl2VzEZ22HvUYhnlLzF5WKp2Z0LUmJyXHQOwBHE6A",
+  "token_type": "Bearer"
+}
+
+[2025-03-06 14:14:06,632 - INFO] - ### Steps 1. Create group
+[2025-03-06 14:14:06,645 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiZGFuaWVsNTUiLCJleHAiOjE3NDEyNjY4NDYsImlhdCI6MTc0MTI1OTY0Nn0.OQPkRavJMqcdIBP7xOnu9oL9B8k2XJu2XyabhBE01N65YZBD3OjAQrl2ffHHQtdMngaj29dwzPTtOYbpOaNtUxa1Q0UiGDroipFQzCU09TAeIQgksNZWD2XCAuEpQoQLi-LLFMiS6ThCrhy-3Ll9MLP1z_GZ3RWLFoTojeNwzRCxVbwWI-xEe-nu6ZJuALNhfZ9hjW5Se7dis31MPZ3gA6By0V5ztrPRm841eXPHhYjaf5dYW0alMyjRvsYWBy7sUiqteEVDDa_r2i4NZC9wilJZL2LfLIsNh_gc_KeRFgMThpl2VzEZ22HvUYhnlLzF5WKp2Z0LUmJyXHQOwBHE6A' -H 'Connection: keep-alive' -H 'Content-Length: 25' -H 'Content-Type: application/json' -H 'User-Agent: python-requests/2.32.3' -d '{"name": "Jessica Brown"}' http://127.0.0.1:8001/groups/
+[2025-03-06 14:14:06,645 - INFO] - Response status code='201', elapsed_time='0:00:00.012158'
+
+{
+  "name": "Jessica Brown",
+  "id": 2
+}
+
+[2025-03-06 14:14:06,646 - INFO] - ### Steps 1. Create student
+[2025-03-06 14:14:06,701 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiZGFuaWVsNTUiLCJleHAiOjE3NDEyNjY4NDYsImlhdCI6MTc0MTI1OTY0Nn0.OQPkRavJMqcdIBP7xOnu9oL9B8k2XJu2XyabhBE01N65YZBD3OjAQrl2ffHHQtdMngaj29dwzPTtOYbpOaNtUxa1Q0UiGDroipFQzCU09TAeIQgksNZWD2XCAuEpQoQLi-LLFMiS6ThCrhy-3Ll9MLP1z_GZ3RWLFoTojeNwzRCxVbwWI-xEe-nu6ZJuALNhfZ9hjW5Se7dis31MPZ3gA6By0V5ztrPRm841eXPHhYjaf5dYW0alMyjRvsYWBy7sUiqteEVDDa_r2i4NZC9wilJZL2LfLIsNh_gc_KeRFgMThpl2VzEZ22HvUYhnlLzF5WKp2Z0LUmJyXHQOwBHE6A' -H 'Connection: keep-alive' -H 'Content-Length: 139' -H 'Content-Type: application/json' -H 'User-Agent: python-requests/2.32.3' -d '{"first_name": "Kyle", "last_name": "Rubio", "email": "bwilson@example.com", "degree": "Associate", "phone": "+71466156240", "group_id": 2}' http://127.0.0.1:8001/students/
+[2025-03-06 14:14:06,701 - INFO] - Response status code='201', elapsed_time='0:00:00.011596'
+
+{
+  "first_name": "Kyle",
+  "last_name": "Rubio",
+  "email": "bwilson@example.com",
+  "degree": "Associate",
+  "phone": "+71466156240",
+  "group_id": 2,
+  "id": 2
+}
+
+[2025-03-06 17:02:02,858 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 163' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=dwaynegreen&password=jdHzdw4%23fWF%24PNvVl3%28%40Gf%29m_JgBj%28&password_repeat=jdHzdw4%23fWF%24PNvVl3%28%40Gf%29m_JgBj%28&email=maxwelljohn%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-06 17:02:02,859 - INFO] - Response status code='201', elapsed_time='0:00:00.232020'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-06 17:02:03,172 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 72' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=dwaynegreen&password=jdHzdw4%23fWF%24PNvVl3%28%40Gf%29m_JgBj%28' http://127.0.0.1:8000/auth/login/
+[2025-03-06 17:02:03,173 - INFO] - Response status code='200', elapsed_time='0:00:00.261798'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoiZHdheW5lZ3JlZW4iLCJleHAiOjE3NDEyNzY5MjMsImlhdCI6MTc0MTI2OTcyM30.Js30-tXn5l-W3W7lHdA6g7rjADQufhoLybGfZrDrlO5VhbaMG1n3-X_Zmk5CECFW5X9FLC751iOFj0wKjpCBjnbMzb18VgFeMKFh8FCDs03aEYOzBTpGWnYYOXKXbqxG_Sp-glvpDq1eGgUq7lOGLk1HlZLVgblHMnISFd-6gqU3tXL_35FcaOGxZ8IOt4TwAuZvosrgN77spCFS2D9rT0gWnK3eVkdc84BifeeXqZLfgr8KThkP8FpNnb2c_Vh967wrErU9UGVAtbD25ndlMlEtir7-ryW99_gR8NCRV55wejNJE8QzLw50KtVNzlJXU1zjbSE9WyoAuZdIQSNsxw",
+  "token_type": "Bearer"
+}
+
+[2025-03-06 17:02:03,174 - INFO] - ### Steps 1. Create group
+[2025-03-06 17:02:03,189 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoiZHdheW5lZ3JlZW4iLCJleHAiOjE3NDEyNzY5MjMsImlhdCI6MTc0MTI2OTcyM30.Js30-tXn5l-W3W7lHdA6g7rjADQufhoLybGfZrDrlO5VhbaMG1n3-X_Zmk5CECFW5X9FLC751iOFj0wKjpCBjnbMzb18VgFeMKFh8FCDs03aEYOzBTpGWnYYOXKXbqxG_Sp-glvpDq1eGgUq7lOGLk1HlZLVgblHMnISFd-6gqU3tXL_35FcaOGxZ8IOt4TwAuZvosrgN77spCFS2D9rT0gWnK3eVkdc84BifeeXqZLfgr8KThkP8FpNnb2c_Vh967wrErU9UGVAtbD25ndlMlEtir7-ryW99_gR8NCRV55wejNJE8QzLw50KtVNzlJXU1zjbSE9WyoAuZdIQSNsxw' -H 'Connection: keep-alive' -H 'Content-Length: 27' -H 'Content-Type: application/json' -H 'User-Agent: python-requests/2.32.3' -d '{"name": "Robert Odonnell"}' http://127.0.0.1:8001/groups/
+[2025-03-06 17:02:03,189 - INFO] - Response status code='201', elapsed_time='0:00:00.013599'
+
+{
+  "name": "Robert Odonnell",
+  "id": 3
+}
+
+[2025-03-06 17:02:03,189 - INFO] - ### Steps 1. Create student
+[2025-03-06 17:02:03,243 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXJuYW1lIjoiZHdheW5lZ3JlZW4iLCJleHAiOjE3NDEyNzY5MjMsImlhdCI6MTc0MTI2OTcyM30.Js30-tXn5l-W3W7lHdA6g7rjADQufhoLybGfZrDrlO5VhbaMG1n3-X_Zmk5CECFW5X9FLC751iOFj0wKjpCBjnbMzb18VgFeMKFh8FCDs03aEYOzBTpGWnYYOXKXbqxG_Sp-glvpDq1eGgUq7lOGLk1HlZLVgblHMnISFd-6gqU3tXL_35FcaOGxZ8IOt4TwAuZvosrgN77spCFS2D9rT0gWnK3eVkdc84BifeeXqZLfgr8KThkP8FpNnb2c_Vh967wrErU9UGVAtbD25ndlMlEtir7-ryW99_gR8NCRV55wejNJE8QzLw50KtVNzlJXU1zjbSE9WyoAuZdIQSNsxw' -H 'Connection: keep-alive' -H 'Content-Length: 153' -H 'Content-Type: application/json' -H 'User-Agent: python-requests/2.32.3' -d '{"first_name": "Patrick", "last_name": "Wright", "email": "jennifermccormick@example.com", "degree": "Associate", "phone": "+73522888514", "group_id": 3}' http://127.0.0.1:8001/students/
+[2025-03-06 17:02:03,243 - INFO] - Response status code='201', elapsed_time='0:00:00.011451'
+
+{
+  "first_name": "Patrick",
+  "last_name": "Wright",
+  "email": "jennifermccormick@example.com",
+  "degree": "Associate",
+  "phone": "+73522888514",
+  "group_id": 3,
+  "id": 3
+}
+
+[2025-03-07 21:57:45,340 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 27' -H 'Content-Type: application/json' -H 'User-Agent: python-requests/2.32.3' -d '{"name": "Tiffany Merritt"}' http://127.0.0.1:8001/groups/
+[2025-03-07 21:57:45,341 - INFO] - Response status code='403', elapsed_time='0:00:00.007831'
+
+{
+  "detail": "Access denied"
+}
+
+[2025-03-07 21:57:52,675 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 150' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=jlogan&password=2%2AKenQSi1S%2Acbga_%28oQByefa%25576Px&password_repeat=2%2AKenQSi1S%2Acbga_%28oQByefa%25576Px&email=gwendolyn74%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-07 21:57:52,675 - INFO] - Response status code='201', elapsed_time='0:00:00.264905'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-07 21:57:53,006 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 63' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=jlogan&password=2%2AKenQSi1S%2Acbga_%28oQByefa%25576Px' http://127.0.0.1:8000/auth/login/
+[2025-03-07 21:57:53,006 - INFO] - Response status code='200', elapsed_time='0:00:00.272360'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiamxvZ2FuIiwiZXhwIjoxNzQxMzgxMDcyLCJpYXQiOjE3NDEzNzM4NzJ9.NEgMx9Gx9UWbniNPYPGmZhJwGR4TJLE_xxjnABJyUCF5KihMUajtyr8UWWYQFaNgl9c8k6-oCTCnPAY41ENB_Qjqfi9J3tfZJHmr2MpjWcmToTekYr1LgcecRnQwL0Hj0iTFts_L1mu0-0arWizWGcJ4ZRbjkCLq3NyG0KSBituwgwV4-FTUhBFnXZ1jbaSttJ37Oef8CI--GsDygH3shX1vUUfN-bKCt-l2taiFHwwU-DAHYwYDvbze-5RbwRzxt2nQgH3hpwVR9QWzGdYk5WXYnOPsXfwbdfOB2AU7pdCgAnD6JYT8OzV4nw6TFyY7v-x-XFL8D_cfdbWNpzEyjg",
+  "token_type": "Bearer"
+}
+
+[2025-03-07 21:57:53,007 - INFO] - ### Steps 1. Create group
+[2025-03-07 21:57:53,050 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiamxvZ2FuIiwiZXhwIjoxNzQxMzgxMDcyLCJpYXQiOjE3NDEzNzM4NzJ9.NEgMx9Gx9UWbniNPYPGmZhJwGR4TJLE_xxjnABJyUCF5KihMUajtyr8UWWYQFaNgl9c8k6-oCTCnPAY41ENB_Qjqfi9J3tfZJHmr2MpjWcmToTekYr1LgcecRnQwL0Hj0iTFts_L1mu0-0arWizWGcJ4ZRbjkCLq3NyG0KSBituwgwV4-FTUhBFnXZ1jbaSttJ37Oef8CI--GsDygH3shX1vUUfN-bKCt-l2taiFHwwU-DAHYwYDvbze-5RbwRzxt2nQgH3hpwVR9QWzGdYk5WXYnOPsXfwbdfOB2AU7pdCgAnD6JYT8OzV4nw6TFyY7v-x-XFL8D_cfdbWNpzEyjg' -H 'Connection: keep-alive' -H 'Content-Length: 26' -H 'Content-Type: application/json' -H 'User-Agent: python-requests/2.32.3' -d '{"name": "Denise Griffin"}' http://127.0.0.1:8001/groups/
+[2025-03-07 21:57:53,050 - INFO] - Response status code='201', elapsed_time='0:00:00.042080'
+
+{
+  "name": "Denise Griffin",
+  "id": 4
+}
+
+[2025-03-07 21:57:53,050 - INFO] - ### Steps 1. Create student
+[2025-03-07 21:57:53,126 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiamxvZ2FuIiwiZXhwIjoxNzQxMzgxMDcyLCJpYXQiOjE3NDEzNzM4NzJ9.NEgMx9Gx9UWbniNPYPGmZhJwGR4TJLE_xxjnABJyUCF5KihMUajtyr8UWWYQFaNgl9c8k6-oCTCnPAY41ENB_Qjqfi9J3tfZJHmr2MpjWcmToTekYr1LgcecRnQwL0Hj0iTFts_L1mu0-0arWizWGcJ4ZRbjkCLq3NyG0KSBituwgwV4-FTUhBFnXZ1jbaSttJ37Oef8CI--GsDygH3shX1vUUfN-bKCt-l2taiFHwwU-DAHYwYDvbze-5RbwRzxt2nQgH3hpwVR9QWzGdYk5WXYnOPsXfwbdfOB2AU7pdCgAnD6JYT8OzV4nw6TFyY7v-x-XFL8D_cfdbWNpzEyjg' -H 'Connection: keep-alive' -H 'Content-Length: 146' -H 'Content-Type: application/json' -H 'User-Agent: python-requests/2.32.3' -d '{"first_name": "Samuel", "last_name": "Schneider", "email": "rachel00@example.org", "degree": "Doctorate", "phone": "+75860112707", "group_id": 4}' http://127.0.0.1:8001/students/
+[2025-03-07 21:57:53,126 - INFO] - Response status code='201', elapsed_time='0:00:00.023434'
+
+{
+  "first_name": "Samuel",
+  "last_name": "Schneider",
+  "email": "rachel00@example.org",
+  "degree": "Doctorate",
+  "phone": "+75860112707",
+  "group_id": 4,
+  "id": 4
+}
+
+[2025-03-14 14:41:34,547 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 143' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=dustin73&password=%5EJbRsC%29VK6D9NtAKKvc7Z%28P2BhwbQJ&password_repeat=%5EJbRsC%29VK6D9NtAKKvc7Z%28P2BhwbQJ&email=jhicks%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 14:41:34,547 - INFO] - Response status code='201', elapsed_time='0:00:00.244721'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 14:41:34,865 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 63' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=dustin73&password=%5EJbRsC%29VK6D9NtAKKvc7Z%28P2BhwbQJ' http://127.0.0.1:8000/auth/login/
+[2025-03-14 14:41:34,865 - INFO] - Response status code='200', elapsed_time='0:00:00.273014'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoiZHVzdGluNzMiLCJleHAiOjE3NDE5NTk2OTQsImlhdCI6MTc0MTk1MjQ5NH0.AaMC2DF_hy-l3kPuNKmYHErHLvHxZDDc7mQpH5Mh1qVIm2dCjN-fo2Ky0zGwgOBfG3JXnlOCh-SI72r47dagwgIK4SV55Wd5InYJ9tQ5dlUzMtZcGqdZUENG8uARnHGdLtHUMdikpJlZfsIh5vT2BVmxKAtpqLsLuF930z9F36Fgt3FVw0qi_JBVuLt8GqLvKtKBFCaAv-2ol89wYpObcJaFIP83znusmVWhkjQIXnrAsyCuniFTe8vv-P1Dkchq3kIHKKr2SSjeT5PIACmFX66msI28chVDJaExuEsneU1CumAjGVw-rqY4Uj8ZB0UgbUqxG8xRHk8nFJKpDv20tw",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 14:41:53,752 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 148' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=hoffmandavid&password=HbDZu%2ALivnWc3%26xOg6%252QWEo8V6bFp&password_repeat=HbDZu%2ALivnWc3%26xOg6%252QWEo8V6bFp&email=mburton%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 14:41:53,753 - INFO] - Response status code='201', elapsed_time='0:00:00.234367'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 14:41:54,064 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=hoffmandavid&password=HbDZu%2ALivnWc3%26xOg6%252QWEo8V6bFp' http://127.0.0.1:8000/auth/login/
+[2025-03-14 14:41:54,066 - INFO] - Response status code='200', elapsed_time='0:00:00.263097'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjYsInVzZXJuYW1lIjoiaG9mZm1hbmRhdmlkIiwiZXhwIjoxNzQxOTU5NzEzLCJpYXQiOjE3NDE5NTI1MTN9.iN22_mMjzc2xVxRPRjhHE97G_nHvdux-uYEslcpYoPw6yYnDG8joWfrgtqIbzIB5LVsylDY8iFZwxviCtUnUmlf8GCjuCRgySUFXwxJfQy_aT0HzIiVnwHCrh71agtkN7z8MdPxwHkodbArp7Ny713MtNcle-pivecc4o63Udssw1sn2Jyhgjy9KYKzhLjRH2_NaxJGC8cMp67a3KGoutpu7XmrfS0IktZsGZm09RkZbUzCzBRR9jomVKElNzkeKd3eu864XFq6xJ-y4-B8paFXVdtpBqRDuRjhIDaHHFdcAg_a7Nencn04jlkTiQJBhginE2I4_p-64wGNmkO7zDA",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 14:43:00,498 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 155' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=collinskrista&password=%28e4zGh3QX%26sAVCcQE%29Fw4%25QuUpLHQQ&password_repeat=%28e4zGh3QX%26sAVCcQE%29Fw4%25QuUpLHQQ&email=erinsmith%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 14:43:00,499 - INFO] - Response status code='201', elapsed_time='0:00:00.230884'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 14:43:00,809 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 70' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=collinskrista&password=%28e4zGh3QX%26sAVCcQE%29Fw4%25QuUpLHQQ' http://127.0.0.1:8000/auth/login/
+[2025-03-14 14:43:00,809 - INFO] - Response status code='200', elapsed_time='0:00:00.259590'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInVzZXJuYW1lIjoiY29sbGluc2tyaXN0YSIsImV4cCI6MTc0MTk1OTc4MCwiaWF0IjoxNzQxOTUyNTgwfQ.D8N_HydnWn2NxTUgvoyh4sEbxwp0Z-CDBc-BJVP_V_HdUSmpGOUcvJUmuU226MfQPnuyR4TThTYhaHotox8PCLttXqE-2iEPb-LiP0XVXi7GWb4NrNTfe2UrL5kYXS1OBUV8MSX9NYWNLEk0zhUkL6knao16ryyVjvCGaR47SmAE1dphkNXYGD_kfQeni0OhZEErYrWkrSKK1pQW0o_BHrZGggDMftxCsH8wOpGY_7LJRsZmBVqD2xkneDed5iS1YXYfx7WIdw-OwzGh0LWFB1UWpM0Gsq6JR4EFATddeL_qnkkG0a5oAUXmLBO9u6HEPhrUpVZNOTyiIKNV4n4kHw",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 14:52:09,420 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 152' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=jameswatkins&password=%21v6F_3n%2BYIhNTKIjsneAg8DhAK22%5EA&password_repeat=%21v6F_3n%2BYIhNTKIjsneAg8DhAK22%5EA&email=bwilliamson%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 14:52:09,420 - INFO] - Response status code='201', elapsed_time='0:00:00.232743'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 14:52:09,727 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=jameswatkins&password=%21v6F_3n%2BYIhNTKIjsneAg8DhAK22%5EA' http://127.0.0.1:8000/auth/login/
+[2025-03-14 14:52:09,727 - INFO] - Response status code='200', elapsed_time='0:00:00.260865'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjgsInVzZXJuYW1lIjoiamFtZXN3YXRraW5zIiwiZXhwIjoxNzQxOTYwMzI5LCJpYXQiOjE3NDE5NTMxMjl9.lh-lOsz89LzqDZ_zD0RJNnguJrTH-LU3FPErr6VAOhhqirea7S1bM0u5g-PeG5CyhwzolLMGixj-AarYDXdI-6cgjBLQSBTqYCD0w-D6_5suYgYnUNA4eeuWrWP5qpG2NUOxdkw5Fte2jWYrRWCuYNzTHI0Uz0qdKt03PrOHhDAtz6MEr91UgQtk5_qhQsNBEpa-21e3gA3s3uaKMCLEpgDFkuduz94-p0ZQCL4F20ooKUsu3zZjr5nBaTFhISBlaZdUMU-D0py-BvXLuLwTNfyBAtZlyxoVk7x-CfKz05KeaHWFl1iahFiWf0hoDjSOQGToTXb88r0tXtIM9I8YZg",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 14:54:28,217 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 166' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=leeethan&password=Fpci%2AM5hCPw%254q%25V%21QHUt%291Ze3e%28I%21&password_repeat=Fpci%2AM5hCPw%254q%25V%21QHUt%291Ze3e%28I%21&email=pattonlindsey%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 14:54:28,217 - INFO] - Response status code='201', elapsed_time='0:00:00.231875'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 14:54:28,521 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 71' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=leeethan&password=Fpci%2AM5hCPw%254q%25V%21QHUt%291Ze3e%28I%21' http://127.0.0.1:8000/auth/login/
+[2025-03-14 14:54:28,522 - INFO] - Response status code='200', elapsed_time='0:00:00.262130'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksInVzZXJuYW1lIjoibGVlZXRoYW4iLCJleHAiOjE3NDE5NjA0NjgsImlhdCI6MTc0MTk1MzI2OH0.SwjqhwBsA15sAtCQEzzt_EloFO0Gmo9my4vee0fV3Bd_aqFgrepejl4mG5BnNcUJs2IdDzFgqCbwWEo5el_X-CeNsIxRSnv8ZXOUVXXjxYK20M7P1cwLRZxdyTasyS8uydHoBbrW7sSkl9LzT8Gy9eooigJRHOe9M5F4zTvuneQSEn-ShKCryK4QAl70WJ_uBQ7zqq2ktkA2RbO1RmIrUnsXjuCXjo2Sn6XgufTVA74_xTXlkB6i6RuDNKWA4D2W46hqm75XsQjtA9FctS7Lbi5enqzu_2_2nusPFJvGXLf3-eerIu405hY2ovv2cq4jreeFqoon_1whtlhLTTG8rg",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 14:56:25,774 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 153' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=staceypatrick&password=revFiq5IvzaV3sp%23CfU%28%23iAE9Vq1ws&password_repeat=revFiq5IvzaV3sp%23CfU%28%23iAE9Vq1ws&email=justinbrown%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 14:56:25,775 - INFO] - Response status code='201', elapsed_time='0:00:00.230778'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 14:56:26,083 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 68' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=staceypatrick&password=revFiq5IvzaV3sp%23CfU%28%23iAE9Vq1ws' http://127.0.0.1:8000/auth/login/
+[2025-03-14 14:56:26,083 - INFO] - Response status code='200', elapsed_time='0:00:00.260844'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEwLCJ1c2VybmFtZSI6InN0YWNleXBhdHJpY2siLCJleHAiOjE3NDE5NjA1ODUsImlhdCI6MTc0MTk1MzM4NX0.WQ5jJ1NLIRFBIVMsbo2LFrogqwGkaRos6tOK4fNNs4979W6K-INugUooc2XdOtOvVWIN8Dm7CJqaEA_6EsQoT0RZrKzjwSihclAe11ynroRy_YOJO9h44TAbgp_nOcBbZJaU46JpCKEjdShs326lQHHDC_axfM9IzvCLEyexSuegea51ZPgZ0BTRaHiGjOG35KssTqRQd08RYnl9XObxA0Un-LWO29tHOnYQvGeAJr2ZGLfjowwam6gO4G-2ppWSDOte0N_IE9NeYPvHzS53v9jGchOW4DnY6GJZLzpctLjPUxiguCV4DFQi_2FWqJJOzFVhJmUV8NJj_SXHr7G21Q",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:03:28,626 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 162' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=ysimpson&password=%40_%28%2B%40gt1%2Au%21ufgcX5J15I0wrorxlEH&password_repeat=%40_%28%2B%40gt1%2Au%21ufgcX5J15I0wrorxlEH&email=jenniferlynch%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:03:28,626 - INFO] - Response status code='201', elapsed_time='0:00:00.230041'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:03:28,937 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=ysimpson&password=%40_%28%2B%40gt1%2Au%21ufgcX5J15I0wrorxlEH' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:03:28,937 - INFO] - Response status code='200', elapsed_time='0:00:00.261137'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjExLCJ1c2VybmFtZSI6InlzaW1wc29uIiwiZXhwIjoxNzQxOTYxMDA4LCJpYXQiOjE3NDE5NTM4MDh9.YiLNJ4OgmOf5McSdXEm5-n8DFz1zaxBkSZhQco52WI3QcOiIDpMahvbJb9Tc24xxQDhej72P4ABuUntIHmv4BNBRJVZf9IksHTyydLHF3zyoMF9Sa09dm9H9DSilQfmfVrvNhhkcw-EIz9dbkXDgmGwhs7u8wsxsmTkY9NtIDfxlHXuX4Qgvl3PoPQD8XUmud63Iv1A0k3kZPZ5kqUxmgFl8Sx9wlMthEZld4H8y6gcsGt4hW-CHUISApNNXsXaKg8qu7Acf9fRNmoL9ZMhLLkM9Rf5eP40rjbbJwLcn7E3yVtOi6Bf62dYpOtgi-txPj9TmEcjY60fStneyDU60Tw",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:14:52,315 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 161' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=rodneylewis&password=jxhtzJ%25l%24m%2Ax4ax4bz%2B%28xYOy%28AiC6D&password_repeat=jxhtzJ%25l%24m%2Ax4ax4bz%2B%28xYOy%28AiC6D&email=melissa29%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:14:52,316 - INFO] - Response status code='201', elapsed_time='0:00:00.231017'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:14:52,621 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 72' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=rodneylewis&password=jxhtzJ%25l%24m%2Ax4ax4bz%2B%28xYOy%28AiC6D' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:14:52,622 - INFO] - Response status code='200', elapsed_time='0:00:00.259689'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE0LCJ1c2VybmFtZSI6InJvZG5leWxld2lzIiwiZXhwIjoxNzQxOTYxNjkyLCJpYXQiOjE3NDE5NTQ0OTJ9.oz2AbpnYgDO4LC5vWtm4TKdR0l0tfvFcbzXZQJxh_FQcxd-2BHms5oYlIvWd3kCkOuwmp_3p8KJAunS3L3mXOvBbsTr4YZifalP1iExfX7a_29-g49Xas-CgxQXDx-Kjf6ASre6KftCXVJqeI7uoLBnz2AO4dvPAc6OJZFYpNEs_5SxHFjuDTRNccVUqbSHCqTPMBtcP2T6pyxlAy7rjzz-qeNSbG4FGwsabTNthhOsOOxjEAvadSXr2kJsByuxCWpCpGMYLdftqx2Cmods-8M4VIEbYyQyxU5NoRSrMjCISJh8P0wb3Oe7zsBipJfavvMkqovpd7YZCO6cbPqWW4A",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:15:59,473 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 141' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=ckennedy&password=9RGgmdmyeDBPMTbpjE8vVfTH_E%5ESaP&password_repeat=9RGgmdmyeDBPMTbpjE8vVfTH_E%5ESaP&email=jackmcdonald%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:15:59,473 - INFO] - Response status code='201', elapsed_time='0:00:00.230875'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:15:59,778 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 59' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=ckennedy&password=9RGgmdmyeDBPMTbpjE8vVfTH_E%5ESaP' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:15:59,779 - INFO] - Response status code='200', elapsed_time='0:00:00.261524'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE1LCJ1c2VybmFtZSI6ImNrZW5uZWR5IiwiZXhwIjoxNzQxOTYxNzU5LCJpYXQiOjE3NDE5NTQ1NTl9.mAVJ8OvXqGFyM2trBrccE_oEqlNdpT6OqCi2ewr68D1GFBh3mk-hjwm5FVWe6_80IkZVz6xn7OzJAbfOKVY7LmxFYbmrxivv53tqUwjavRTfOIvJlyaevrQGMwrKjaNBVdBttz7CNKtDs_NsgUAzfSATmv5jnHZZQfPJ03AL0NR6RlvJ9FwLaU4QAIAK4xyVF_QYgsyn5sbou8Ds_GcedBaY09dXXZrXwT6iJrO_cls7RB1UKifbBvrj36VJRSDRxa0pNy7YbY3ulHPJ_1zdfzROYtF1z_CO8vU6Xnsq5PYm4VMsqSwnRy-shRvIGRUVHXruwK4pVzzXTW1rEunDMQ",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:21:57,866 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 153' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=hingram&password=pbQ%2AOWhV%25%25yuzOuGUFgf67Gw%25_F_8G&password_repeat=pbQ%2AOWhV%25%25yuzOuGUFgf67Gw%25_F_8G&email=marcusmcclain%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:21:57,867 - INFO] - Response status code='201', elapsed_time='0:00:00.229841'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:21:58,181 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 64' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=hingram&password=pbQ%2AOWhV%25%25yuzOuGUFgf67Gw%25_F_8G' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:21:58,182 - INFO] - Response status code='200', elapsed_time='0:00:00.262721'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE2LCJ1c2VybmFtZSI6ImhpbmdyYW0iLCJleHAiOjE3NDE5NjIxMTgsImlhdCI6MTc0MTk1NDkxOH0.OzcLeuafAJKsFr_KKmON5va9W7moH3xlJAvZMZ84WPTXj6IjHKehIpryDInumGJAjyvSdnA4gqKHxfLniLHNjKoJOjVyuaHXl3sklpeHYsAKO5EHCMndQp2_wz5AdqqtB0RKjXD2Bh6ekY7S9VZjwDONV959rQqypA5cfc5OvFfLp2iH1LKdj8qCijCda7V0R93f9ekHgoeqLbVe45-oY9Lcs7fZKcyvHEIRwYBtXxsrC09MzEpVGvpOPm-wZFJhkYAFMMibjoMP3MqQDatwENfjVoQjHfa5liUMftpdOaG5z-Th0X9D4iPKaJEOC9nJQ0f8P2q5AwlOsc0ip4rT8g",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:22:10,395 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 144' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=wmorales&password=%40zizRNx%2AQr%2ALWCDfvSdVcp8aLh3xay&password_repeat=%40zizRNx%2AQr%2ALWCDfvSdVcp8aLh3xay&email=probles%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:22:10,395 - INFO] - Response status code='201', elapsed_time='0:00:00.231453'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:22:10,709 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 63' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=wmorales&password=%40zizRNx%2AQr%2ALWCDfvSdVcp8aLh3xay' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:22:10,710 - INFO] - Response status code='200', elapsed_time='0:00:00.267333'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE3LCJ1c2VybmFtZSI6Indtb3JhbGVzIiwiZXhwIjoxNzQxOTYyMTMwLCJpYXQiOjE3NDE5NTQ5MzB9.ejQjHYl_-aSzAwC8YqPdBGjHDjWmpEadBKC-i7E0OvlX_G7WSgO0Rw9D3wTMqEXtHxEqy5q2_wDEvkDj8zC1l7E8-r1iPb327v6RSly79n31usKnphkFI6h9tdohgJC5GuonZECR6Mm6A-2GtpO5QZUbIqpey8x3fcFouYSiLPb5b2-3yWXO9wkc7ppqNhrMANNknDZi_-iu7enTGEhFcnW7RhxB7a_pCPGqrCnyYC4Xo5KMiAJJjGhzqcXUgv_isNAGz6X8fLKbc4au1sKW-qhQjhGE8PViwoDPgXsufqIUQAzxg1Vbetii6zlp9_iEW_XCE6FgH38lZU4WFLA7Rg",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:23:38,363 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 155' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=ivanwright&password=%24jJ%2APJwRywDYQPhzWR676XTu%40rjBPR&password_repeat=%24jJ%2APJwRywDYQPhzWR676XTu%40rjBPR&email=daniellemartinez%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:23:38,364 - INFO] - Response status code='201', elapsed_time='0:00:00.231802'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:23:38,674 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 65' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=ivanwright&password=%24jJ%2APJwRywDYQPhzWR676XTu%40rjBPR' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:23:38,675 - INFO] - Response status code='200', elapsed_time='0:00:00.260782'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE4LCJ1c2VybmFtZSI6Iml2YW53cmlnaHQiLCJleHAiOjE3NDE5NjIyMTgsImlhdCI6MTc0MTk1NTAxOH0.ZYT7HuLR8xRDqYfNcUgHY6UmfIK4t8qKnizACupREo8gGBxodQ2VrrEhllfPZnahl8VyvLLa0FCa854z6Wg-xAxuz1jXVaBr2z-rvV9xPJAi1Lu4_80F2qAipRL9Qw3z6XFsum7bWqoFI6tgzT1eEYOZ1SYtXkYcIkg4hLxGzjPm56EWVrhB2BDXlJ-r7lwJOU9p2BetoeoxqqubpsgeQFHH4EsyI_71UZPOr8InqTUDZOJwIpdfb_2w2cl-tsRj_ze0fUAYrSPWjaJmI8y6wgL5rafRwGBUXdPzNQiYG3m8jTxUEVbhBsNYiHbMV7BtUe7MXwlG-rsSH9AZi-erlA",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:39:23,439 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 152' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=cranepatrick&password=uutZn%24dz%2938%2B%40kBwh8wpwVi19VmP0g&password_repeat=uutZn%24dz%2938%2B%40kBwh8wpwVi19VmP0g&email=tracy19%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:39:23,439 - INFO] - Response status code='201', elapsed_time='0:00:00.231370'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:39:23,745 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=cranepatrick&password=uutZn%24dz%2938%2B%40kBwh8wpwVi19VmP0g' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:39:23,746 - INFO] - Response status code='200', elapsed_time='0:00:00.262024'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjE5LCJ1c2VybmFtZSI6ImNyYW5lcGF0cmljayIsImV4cCI6MTc0MTk2MzE2MywiaWF0IjoxNzQxOTU1OTYzfQ.FeZliAX_HCyqziXpUR7YGqzRk42wc2rJUySAK7riGdcFtCJcO5qJCrCUl41H-ye8YQxdHbVtSN_LlOEZF1HPeeKU9Kdd9-6Xpx4-edJlgH0IGTEYuQ4HvtPzSormVXOC5sO4JGCF2NX9TPhcRCdCpKc-TDpYJspUQLKnP5gOsoMAEezgnvoRb8dhQZfOssYrM5cUdoUVMUMhHTOrkg0-GGwiQN5uh_s2SB-GmuUTTKI5sw4k0d6dQWQDSbJpduiulqbINptYTrlORih0gv-7ixMKxiHWEi4XfwghwwIU-UveOKpa6EN8DszQdUVgZTQSL_V560C5JD5WuTWe6wZUzg",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:41:28,640 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 158' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=benjamin49&password=WM7Xizwn%40y1Tpu%26%25N9f%26Aft%265YueoO&password_repeat=WM7Xizwn%40y1Tpu%26%25N9f%26Aft%265YueoO&email=stephanie77%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:41:28,640 - INFO] - Response status code='201', elapsed_time='0:00:00.231828'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:41:28,949 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=benjamin49&password=WM7Xizwn%40y1Tpu%26%25N9f%26Aft%265YueoO' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:41:28,950 - INFO] - Response status code='200', elapsed_time='0:00:00.263251'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIwLCJ1c2VybmFtZSI6ImJlbmphbWluNDkiLCJleHAiOjE3NDE5NjMyODgsImlhdCI6MTc0MTk1NjA4OH0.Tk8ssakcEy6NfZSUMP3Lw2WSWNVelplYTvGQ2Kn2fiE9dhhOKIg5pAN6_YLLnYvttJhSprMPDLZeD0c6Dbu4ZDikxulgnuUZd_E_jt3oDT-dUG3_6eWjqvb9Ttcq0XHYnPMg7xwxD1p50Z-tuif4k7sXmEjgcLIcpvCTjTXRXGte-lr4JFMW2kMF69kcNtKKindtkiqluum6jluNY-T2ptyvgFz7B6E4tbqCC6VOgG-NDnhgob087SRtM9x5lLmKGbCoqlOWBH7LUp9aAlBiTBC7CPAhy8likZiImxmNghtp-XsMX1P6lMWOTyvXaCgmXRKfrWtLWQ0AJsFVQeIE9g",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:43:05,217 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 158' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=qcampbell&password=cQ%23m%406AE1lI%211WQZIB%29RULewFK5%29Tq&password_repeat=cQ%23m%406AE1lI%211WQZIB%29RULewFK5%29Tq&email=tonyamorales%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:43:05,217 - INFO] - Response status code='201', elapsed_time='0:00:00.231444'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:43:05,522 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 68' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=qcampbell&password=cQ%23m%406AE1lI%211WQZIB%29RULewFK5%29Tq' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:43:05,522 - INFO] - Response status code='200', elapsed_time='0:00:00.262490'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIxLCJ1c2VybmFtZSI6InFjYW1wYmVsbCIsImV4cCI6MTc0MTk2MzM4NSwiaWF0IjoxNzQxOTU2MTg1fQ.TlbGhrsXC8fMNXPzvOQuLWFmJn8W_PUHC_i6_QhiJH4N6cY6Bu1efvSvPnkjjIU5K20yhJCTY-By4ais_PlyQeDNw7KOFePwUFqnCZ8elOf_vwaa3PByvQecPSJVwd3KzkYCXp-zTfT8fGbg312ClT1m6DootCQ4TKVOEOWY4w0cdrqPgxmHPJ4lDsjfDzmCZtrW_NRVHpxR768545ufDReRQR-be1bnhpAs4jiHH8ioA8wYqFlxCq-dTeJYZqNR7-LgADwCvKBuCEBCJNy9P5Xir1pq7buqm0RoYvaozahOXeJyLWqVfPPCTeY5-gqwdieyX6eOOL_1tnETgl5K0Q",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:43:40,593 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 141' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=jessicataylor&password=b719seauhkOAZ5qm%21T2u6HmdzZAHKV&password_repeat=b719seauhkOAZ5qm%21T2u6HmdzZAHKV&email=megan92%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:43:40,593 - INFO] - Response status code='201', elapsed_time='0:00:00.231379'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:43:40,903 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 64' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=jessicataylor&password=b719seauhkOAZ5qm%21T2u6HmdzZAHKV' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:43:40,903 - INFO] - Response status code='200', elapsed_time='0:00:00.264946'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIyLCJ1c2VybmFtZSI6Implc3NpY2F0YXlsb3IiLCJleHAiOjE3NDE5NjM0MjAsImlhdCI6MTc0MTk1NjIyMH0.G9mLawqllUqrIOa4rmgokT_bu7KJbqk47CHNoBAOC1iU6vCBjjw4Ji7bPVOvuUeeD4FwsfufzXwg50B6v7YtWj9NHHWBc05Y_CVg3oqW03g5O206cHkoapgtwN62veMj5s60_YmnsX3rpoPcy-Y4ilfB1pGP9SHySjiqV9Li6QQ5VE2C_jW-UwKzbUPwRvV7lvOGE69_Gk9zhNrv8Umw9D60gybs_mhR9zJlA92phr33vWA3axyFn2iDoW1nwz9fH8Y5uWl3UUgMw7hRRVVSepCW7n8QC6X4tin39XdAcv8lzX_5weW2QHxr1Oz3oDShN0oQo_NCljDhb2fzN2wOtw",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:43:56,199 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 147' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=ricky16&password=XmZTuT6c6GPc%24N37if%24%40z5kwhhBTm%23&password_repeat=XmZTuT6c6GPc%24N37if%24%40z5kwhhBTm%23&email=ifuller%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:43:56,200 - INFO] - Response status code='201', elapsed_time='0:00:00.234502'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:43:56,511 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 64' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=ricky16&password=XmZTuT6c6GPc%24N37if%24%40z5kwhhBTm%23' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:43:56,511 - INFO] - Response status code='200', elapsed_time='0:00:00.266768'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIzLCJ1c2VybmFtZSI6InJpY2t5MTYiLCJleHAiOjE3NDE5NjM0MzYsImlhdCI6MTc0MTk1NjIzNn0.mIGmXFU3MYXOfKB39tGQMsPrppUd0mK7J_vnD9fG3qtMJfDN35T2WdWIhzykQD1ajOf5s_c5lUbQ7DBVZf3bqYIoImCsehjki1q51XXqzDZRCOrFRL5fHeOuvaGSsD0hD1UJP78hMZVahAszR8HtkECvSa35HRwS3uOa4zqSc_x4MsmchtGyBFs0YIqfbJXUAH-9Gbu-JD4RSKRy8Z17Xc2rsH84_4zJAxQf08meu-5xapTMS2UD5DayK4F5zsEL85von15JOJzGaIwQr8M8a7erkJjANMrH1KYbmvCXmMBNIwWpgV7fEZr5Y4hzuP5AirH2yImE5t_HqdhMOQkYfA",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:46:32,770 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 152' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=brianramirez&password=%23bqahcMIA8%2B7R2ZlMpNQKj5Sg3%243sc&password_repeat=%23bqahcMIA8%2B7R2ZlMpNQKj5Sg3%243sc&email=watsonmegan%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:46:32,771 - INFO] - Response status code='201', elapsed_time='0:00:00.234684'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:46:33,076 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=brianramirez&password=%23bqahcMIA8%2B7R2ZlMpNQKj5Sg3%243sc' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:46:33,076 - INFO] - Response status code='200', elapsed_time='0:00:00.261637'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjI0LCJ1c2VybmFtZSI6ImJyaWFucmFtaXJleiIsImV4cCI6MTc0MTk2MzU5MywiaWF0IjoxNzQxOTU2MzkzfQ.ZyhSkjKCJQmpzZTXI8vMBD7Bt5ydqELmzI9iT8XFmVG9TOo8sHi-z1tLT47R7c62cyXBXwvkaSvmmeOVBIkQE1TV1_pdD2cwgpHtXj0MY8xVdlCSvqLjXsxCm_tu_wMJdtShdVi6SM6lfKMbM6lwHMLOwvZ5Q18HYYnGuefdbgkziIujICvaA-0iD-OqjNgQKc8AI3XnHQE2Po-0mL4gRdwF9GUxTTiia6tNMlfYMF0veN_gRMXs2jSGEMEV5isnRRDK5WFIiVUhi6o_fu41H4MHjb_g7Zj3hnZrboYjxR7_CR9FZDEE7wb2VABpbEsVSBcmQWjGu427BACGzO_5uw",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:46:53,335 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 155' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=dylanmcbride&password=lJ%5E%2AM9O0%21sRa09de85Yv%25cMZ%23HltRl&password_repeat=lJ%5E%2AM9O0%21sRa09de85Yv%25cMZ%23HltRl&email=mary90%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:46:53,336 - INFO] - Response status code='201', elapsed_time='0:00:00.231985'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:46:53,645 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 71' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=dylanmcbride&password=lJ%5E%2AM9O0%21sRa09de85Yv%25cMZ%23HltRl' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:46:53,646 - INFO] - Response status code='200', elapsed_time='0:00:00.262465'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjI1LCJ1c2VybmFtZSI6ImR5bGFubWNicmlkZSIsImV4cCI6MTc0MTk2MzYxMywiaWF0IjoxNzQxOTU2NDEzfQ.oBK847NWm0YwRzO9d-STqmrvi9qHI_qVdflbBNEeCagynHRlV_rCyDUH9o1KRzUbrOlK0uskgQEBPVE7aqXl-HiA_fXPXM4HmAXtkAXQn60DC-On58gwcw-10Yk5VKjGLvErA0fjC25rwcHDhnZdD1IB9NGUiVTEERd2quFOyZWRaLPkXzgH9swmBur2Ugg2RcKMmb4-DKN5M-D9MKyHufkss5HdBc9OxtoE47dkRCtGMD4nzy3ELoYZ-b9LUvof6M84Iu57oXu4rVmHLQxeMepJF6yhxPNQ5KgrK-PtxhkK7Fak-yN5r8cefgCi7tVAxYULGgxPxUlQWMvdLUYshQ",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:49:01,717 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 157' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=alison37&password=%254G%29Rwc%25ReZEtRE7k_%2AliS%2Bc3x%24dPE&password_repeat=%254G%29Rwc%25ReZEtRE7k_%2AliS%2Bc3x%24dPE&email=uanthony%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:49:01,717 - INFO] - Response status code='201', elapsed_time='0:00:00.231291'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:49:02,025 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=alison37&password=%254G%29Rwc%25ReZEtRE7k_%2AliS%2Bc3x%24dPE' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:49:02,026 - INFO] - Response status code='200', elapsed_time='0:00:00.262231'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjI2LCJ1c2VybmFtZSI6ImFsaXNvbjM3IiwiZXhwIjoxNzQxOTYzNzQxLCJpYXQiOjE3NDE5NTY1NDF9.mQ-5Sj0Ecfcb_HmtxnkIqbzIE5OtRO-5VX5XgfCwa6soMU572U2f7Tud4G-mHh9AMLXwvKjvRBW8-GlT6BqCTX9dvGvHxnQtKLO7RdubamCfVc7B5EV2ziqipUzRXb88Lrl-aOTAXgNy4zwp3SMOB5dh-AaZk2ISmmzz_CiuCN0vMoWmwmxqHpcLLuPxNbnpDr_CUxcrE52BoGnk4bJ_iudqiintJMASaHjOluth6ZnW3yhbI5IuoWyeUcpSJnOBLksa9gTkGC3Imcrtmdh108VkUiXi5fsFH7cgeQJsNpEFmfB2eqysyEPbUkmqe7xTMhR552bCl6iwlb3qtaDy2w",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:55:55,952 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 157' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=lesteranthony&password=pHfXM%2A6Wj%26xb6gihPwU%23VnGHW%2A2zay&password_repeat=pHfXM%2A6Wj%26xb6gihPwU%23VnGHW%2A2zay&email=garciapaige%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:55:55,952 - INFO] - Response status code='201', elapsed_time='0:00:00.231857'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:55:56,264 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 70' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=lesteranthony&password=pHfXM%2A6Wj%26xb6gihPwU%23VnGHW%2A2zay' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:55:56,264 - INFO] - Response status code='200', elapsed_time='0:00:00.265969'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjI3LCJ1c2VybmFtZSI6Imxlc3RlcmFudGhvbnkiLCJleHAiOjE3NDE5NjQxNTYsImlhdCI6MTc0MTk1Njk1Nn0.jXXg3nWZuyYSJVOSNbugesIJqCmms35XDxywFHY_-0fIXEm0VO_eeHq9E5QOKRQwmg-FHk1wjhAf7Albhn2isHb-A3TAOPyFl-OeJ0m7i1kWUHV8_gC664qDoAL4MtXd3m78_b0yd4Gf-MXsN-aL6CA4_3jCNKggOk-KyaMT5CXim1Q2CflKHFCkj30ofepJcUanuH_h2eqzHvIqMToQ7EfdHvwXHtNEQT1Av7BN0Mzs5_pCz0mmEs7T1JN0en3gCq10pyee1nVZB3DdnIiGQUHsPkGWNYRmqOotW-yRXMqGqtd5sd1fDWLrDK7r2SATG7hAzMO7blX1Zwy6krO6Ug",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:56:28,518 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 170' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=cooleyernest&password=gd%2BmCm41%25%2BeX%29udMG%5EG%29ZfiwH%243sMi&password_repeat=gd%2BmCm41%25%2BeX%29udMG%5EG%29ZfiwH%243sMi&email=mathiscrystal%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:56:28,518 - INFO] - Response status code='201', elapsed_time='0:00:00.231663'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:56:28,826 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 75' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=cooleyernest&password=gd%2BmCm41%25%2BeX%29udMG%5EG%29ZfiwH%243sMi' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:56:28,826 - INFO] - Response status code='200', elapsed_time='0:00:00.265769'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjI4LCJ1c2VybmFtZSI6ImNvb2xleWVybmVzdCIsImV4cCI6MTc0MTk2NDE4OCwiaWF0IjoxNzQxOTU2OTg4fQ.bOxOkHOmqNDaQGjeyY2xXCxF7z97-0IoQwHX5xuIeLeCm5imXeoXPgsvNFWSIGPTMSbmn3YSsB-Xe6biMpWQrgwLzhQVH43O3_TpCX4cGk7qSMK1SgmgD244TVeGi1nHc8c_pM7aUWaOGNyTsmQ7GgyMqeCBLmTYBaHSuq02boCj9UPlEZlTUYeKk771Ej0SJbER1cxBOjLXeFtXyjYGkFEAGCvJL5YkG6eeSqvCOFd3qtiTVsAqZLm-dGQitSiBYcPs8YMFcbutD9OfHM1cf5cfsa-BTSCwQwjjkK_nSEsOA6Z-EOT-10iEaV_i00CtFnMd-Y4Wux6PQu4fPDbs_w",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 15:58:17,893 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 155' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=brennandonald&password=%2526K%219JcMcr200l54N%24W1pzgMMgJgQ&password_repeat=%2526K%219JcMcr200l54N%24W1pzgMMgJgQ&email=jenningsmegan%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 15:58:17,894 - INFO] - Response status code='201', elapsed_time='0:00:00.231595'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 15:58:18,208 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 68' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=brennandonald&password=%2526K%219JcMcr200l54N%24W1pzgMMgJgQ' http://127.0.0.1:8000/auth/login/
+[2025-03-14 15:58:18,208 - INFO] - Response status code='200', elapsed_time='0:00:00.266184'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjI5LCJ1c2VybmFtZSI6ImJyZW5uYW5kb25hbGQiLCJleHAiOjE3NDE5NjQyOTgsImlhdCI6MTc0MTk1NzA5OH0.awFtvMW3i0MXgOHc8Oo-6hBuRvpi4lXM2t5zmNpISLH1IjOIVKQRlJ5f6LqNqEm7LvClzby9ABpr0qFVr3VCVyWH3JAmvZlR08ZvG5ahrq7INkb45BsUKrdhbFFk6L8_Uttry4wuBJ9NN5kLo4QGADpRkUf9UtM_kLsP6SbEgoXMsprYkR9HHaTESPvAS8lpY5upw0MQV_bCBcqyIV-2dTBCkuC2rPcdaVnsJAOhTl3wce0ahdqy9P1zN1c0af_2O0r0-iFRZVVtndvZQe-5KeKDKRTwN_T8NqV4n-zZVWcRhChTtyGyBgoVygX-oRdu714EqezstneVsuqtNzot5w",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:01:57,163 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 157' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=sarahbailey&password=q5x9vdawh9%28zAro%28%216X%2AEFni%5E6%5EEQg&password_repeat=q5x9vdawh9%28zAro%28%216X%2AEFni%5E6%5EEQg&email=fking%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:01:57,164 - INFO] - Response status code='201', elapsed_time='0:00:00.231549'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:01:57,477 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 72' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=sarahbailey&password=q5x9vdawh9%28zAro%28%216X%2AEFni%5E6%5EEQg' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:01:57,478 - INFO] - Response status code='200', elapsed_time='0:00:00.268747'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMwLCJ1c2VybmFtZSI6InNhcmFoYmFpbGV5IiwiZXhwIjoxNzQxOTY0NTE3LCJpYXQiOjE3NDE5NTczMTd9.eTO-7Ebq_IN0sCjPK5qzL9R-1YoS8ML5M_JCpYbfMQm9AWHc4L_eBBsqiL9etoYIQJkqbzqaNnqanKSX_OU-H7t7xy_Sngm1EXdbb38h9eF8A1WKMOB7PrlYx3s3BNbRd8cEcbavruRGFDWoLaBu3mA7DGbgtXlzIFx-K9GfPL4h1jjl8f16t5ZN9gCpZt43mwM0GFaREur8hG3hlfRKev0GzVrOjVNDeVBgewzhu8aXLFXcOLQpX2T5-HtwWlCZpwD2mpsiA6-mFXQinmfGZAJMrlvT4juJytIE6ITWDB4ugswUqeXUekdDrAr-3R5-Ivs3JY0d8Nb0afTit2tCkQ",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:03:24,020 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 160' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=jennifer62&password=F9J%2Azc%2AjxWS%2BdP%26Fq%219%2ALWUWM45fEn&password_repeat=F9J%2Azc%2AjxWS%2BdP%26Fq%219%2ALWUWM45fEn&email=richard90%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:03:24,021 - INFO] - Response status code='201', elapsed_time='0:00:00.231503'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:03:24,327 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 71' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=jennifer62&password=F9J%2Azc%2AjxWS%2BdP%26Fq%219%2ALWUWM45fEn' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:03:24,327 - INFO] - Response status code='200', elapsed_time='0:00:00.264288'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMxLCJ1c2VybmFtZSI6Implbm5pZmVyNjIiLCJleHAiOjE3NDE5NjQ2MDQsImlhdCI6MTc0MTk1NzQwNH0.g5oos9BzUrSGNjppzFPLG1dqmiUfslGKsCFUAN-oJr0-wvvpSylGlxn1uABlMiH_FTVOM64l0g1iE6mn2efRpJ2rKqtdSqu157ACpoZUkdOvNGxsRjggEer3MpljJMD_cI74I8SIVG4rA5ON6sJODjACKaYG_fzQImlys0Z3nZY4tzAv2xhkmUfxeQqmTpEmTGWovj2kGwSy67Sd1Qx_KQ0Qlj6NKBnxilnRXDPLyaKR58meQEoEakSGOJh4fYgudH1GTcbP_utRr0e4iTy123G9DSxDJc0GpelhEFVdAjHXVR8aHmp8gBCS46-Csa3dRUT01QPecoOtS55S8uPzlQ",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:15:58,365 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 143' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=shannonkaren&password=Y4UWL1CRjWjQxSoX%29oGSmNEFr6O%21VH&password_repeat=Y4UWL1CRjWjQxSoX%29oGSmNEFr6O%21VH&email=gary64%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:15:58,365 - INFO] - Response status code='201', elapsed_time='0:00:00.232179'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:15:58,677 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 65' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=shannonkaren&password=Y4UWL1CRjWjQxSoX%29oGSmNEFr6O%21VH' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:15:58,677 - INFO] - Response status code='200', elapsed_time='0:00:00.262325'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMyLCJ1c2VybmFtZSI6InNoYW5ub25rYXJlbiIsImV4cCI6MTc0MTk2NTM1OCwiaWF0IjoxNzQxOTU4MTU4fQ.NBk1e6x0s7OfnXHB28Mf7WHTI4SLouG5DuV3zXDQQGIW8fL1HQiJb0VjtCWemofADoYRYe0XfcZS6rEq0LtKMIs2DKm42843mAfjlV-eFdGrQz_qHktzqHFYDGc8nqHz2Rr-8HaHO5thT2XGp9kxkljWuUZ5B1HbcmKRqGdNn30KYf8uufMvSxeOfpWVYpwMmW26BCzzuCiPYHrWFPI5elWPj7rAIQmFsUQ8-VHa0qZFYGh5_VCHQNvKfk_75q7T9Zq7Z7Exed_j43SJiteUS61RKcwNAZe5fgCe3KGgQnrZ-S9fWYwUaCkMXlsetrs_bcHCH7knnsi5azbmtLmjYA",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:24:18,642 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 169' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=monica88&password=8%2ALE3%2AG%23%28vZ3XFkfnYI%21kK%26cm%26Zy%5E3&password_repeat=8%2ALE3%2AG%23%28vZ3XFkfnYI%21kK%26cm%26Zy%5E3&email=brownmichael%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:24:18,643 - INFO] - Response status code='201', elapsed_time='0:00:00.234359'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:24:18,956 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 73' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=monica88&password=8%2ALE3%2AG%23%28vZ3XFkfnYI%21kK%26cm%26Zy%5E3' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:24:18,957 - INFO] - Response status code='200', elapsed_time='0:00:00.263721'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMzLCJ1c2VybmFtZSI6Im1vbmljYTg4IiwiZXhwIjoxNzQxOTY1ODU4LCJpYXQiOjE3NDE5NTg2NTh9.ko2BvHItnEfyus8Ni6vsojy_r8lEjaZUPcgFnKTquIhIVBGOpfYkqli-EJZfdxZa73RpzQGkd-fnnUbmg-yvnSV_QqcT_llwm7BByTw0dHDSeCepkUau5_vr51PyjU21yVhNo0Ffsy4xSUSzAI-7sqAjNzXmZr3k9CuAKUJtxIYigA2ISkVww1w_sV-BluFf8RZTqZvDeeirbPPhp2FK6cY_79Q99QmzIdiYfZoVy_e0Tmvst2_y_LZOBK3ZlXdqLJFSsQhGKRnHvV0roK970-gb26zUOJ4LeVeJmSMqUZ3dMDgtHt6qe-3v3xQRkF7aPkYvWXV495DpQkBhwlH60g",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:24:30,480 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 159' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=wcruz&password=%252SUtmJ7BUCTmAVw%26ntN64%5Ec%29aGV%2B%24&password_repeat=%252SUtmJ7BUCTmAVw%26ntN64%5Ec%29aGV%2B%24&email=watsondouglas%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:24:30,480 - INFO] - Response status code='201', elapsed_time='0:00:00.232221'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:24:30,792 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 66' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=wcruz&password=%252SUtmJ7BUCTmAVw%26ntN64%5Ec%29aGV%2B%24' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:24:30,792 - INFO] - Response status code='200', elapsed_time='0:00:00.262396'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjM0LCJ1c2VybmFtZSI6IndjcnV6IiwiZXhwIjoxNzQxOTY1ODcwLCJpYXQiOjE3NDE5NTg2NzB9.ce-7xsxAb3SiFJwKpXiXyqVHd-Tea1KIljoQwxXLm0iSQe2T1ORF4KxZes85Cfkhvy7ZjAb_nH3otoCkle_u7tVIE50xGRuNXCL57qoS4oh901cyZO9aU3jbUvY9CcdgWv8OMueLVk6lTPNmmqmSU5NwPkipsdk40sXBGHOI9IaYUXccMwxgaXLki0Bep20skBd_2GRybFuQwYNNWYtZSw8DfalbczDKrBUdfvei_FtnzJ_7tcLo5P_EtaLKDzpll3Nmj_xH1CpgAxLZI8CxAshjBrqB_0SgNTbTXHOy_WdannkkflXOLomeTUn2AvSaxtIhCzpASRIPcf9HB8Zynw",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:26:14,337 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 173' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=pittmanmichael&password=%21S%5EI%24%25vP7M0P%23O%28na%5EtFn%23Tv%26tm6kN&password_repeat=%21S%5EI%24%25vP7M0P%23O%28na%5EtFn%23Tv%26tm6kN&email=jose27%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:26:14,337 - INFO] - Response status code='201', elapsed_time='0:00:00.231637'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:26:14,644 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 81' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=pittmanmichael&password=%21S%5EI%24%25vP7M0P%23O%28na%5EtFn%23Tv%26tm6kN' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:26:14,645 - INFO] - Response status code='200', elapsed_time='0:00:00.264853'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjM1LCJ1c2VybmFtZSI6InBpdHRtYW5taWNoYWVsIiwiZXhwIjoxNzQxOTY1OTc0LCJpYXQiOjE3NDE5NTg3NzR9.fLkd5z0ziKgCZlnGHHUyVPfSMkfCGMTkCiiAi3aZojM9rUt1zNtF-IM-F3uxjT_l2jehTLUWlRJNiv9ghUpJvFM3il5EJEnVvgZRaPywBNIT0NNafU765LP-iRnr7tTJ90ZfR_DegbzNpahArd2sGy0G6ejJi6Mv0xNm7ONHXXpoL93hy_bYhBWTIxhKTTAzSA_xvH2fQNRI5m-7GMIdeITzvwMlEJeYs3N4uEVqop2D0yQv7Y9HMcUUe2F2WJSKqzM4W7YwUurvn8gxH2zI-717CmSOmp_VA65L5Mm7pLCpruHqL8YnYICadbO-27cubjKRWUnpjECwBuMaTP0QYQ",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:26:42,569 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 152' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=ukennedy&password=xQm2Z4Rh%26b%294nwMTviwDY%25%29Ib_53R2&password_repeat=xQm2Z4Rh%26b%294nwMTviwDY%25%29Ib_53R2&email=andrewclark%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:26:42,569 - INFO] - Response status code='201', elapsed_time='0:00:00.231410'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:26:42,878 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 65' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=ukennedy&password=xQm2Z4Rh%26b%294nwMTviwDY%25%29Ib_53R2' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:26:42,878 - INFO] - Response status code='200', elapsed_time='0:00:00.262705'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjM2LCJ1c2VybmFtZSI6InVrZW5uZWR5IiwiZXhwIjoxNzQxOTY2MDAyLCJpYXQiOjE3NDE5NTg4MDJ9.fkNsDlCZBDQPQmqkm_M27wECs_pRJcomYJtV20oK_IwgNxr2aUCCYcmg4lRSfKRx34i5sn4Klcy-ikbO-c7JeGbj_2FekG0ujUh37BV2w20r0U_w1-CYfjE8sWywp2W6bBCBRXcnUgjul8XdjJmQzyJV8zOin5HFD-A42HRn4HW3Jsi-6AkMuzTHinlOzNtkgFqzjkOpFRyxxOcQPnu99XziK4UWzKqAJnLp1Zr6gwSrm4lUxUV7zzDPBqK0ntdmGcfmXbjlMEsqhWd--VHJIaKMwYkx8q7-z-w2xM61maUWnPSfGJqMG80Ity6pd36Z5NpTrytaEBL8od9nGtGVLg",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:27:19,360 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 157' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=victoria75&password=%2B%294SfJ8w%2A67JLIxaGJ7Ctaf%29%216y81E&password_repeat=%2B%294SfJ8w%2A67JLIxaGJ7Ctaf%29%216y81E&email=holmesjohn%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:27:19,360 - INFO] - Response status code='201', elapsed_time='0:00:00.232268'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:27:19,675 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=victoria75&password=%2B%294SfJ8w%2A67JLIxaGJ7Ctaf%29%216y81E' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:27:19,676 - INFO] - Response status code='200', elapsed_time='0:00:00.265634'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjM3LCJ1c2VybmFtZSI6InZpY3RvcmlhNzUiLCJleHAiOjE3NDE5NjYwMzksImlhdCI6MTc0MTk1ODgzOX0.lfSUhMLGr0M2toHfd6gK67hMRe6Cslton0Ue6PqaWiamrNYF9NQnSrVwO_ANDsUQFhivkfeFipZZkDxH3voR77EHysyaGiBElGqpZlsPDrAgANDxu13LloprbdOKS-RP7O-kljoihOE3lHtMGfknD29uN02vy3R00rRxVw2CX22PevEkj95FzryNqjndgeRppQJPmk4QG26D5k0M7KkSqfN5hlxR2CpBxcwIIH7vY9bXTAoy1exNqCjZPkNcJIFCB2me4WwXjpC6GMrZHGgdLsDj1Wrjf6N-vYxNBPQI4LR3AkD9RkqUeFLlmEFDMLxNvcj1I-a7n_DwRAwuSBX5EQ",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:27:47,612 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 141' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=gary50&password=8rnmLfP%2A5ia5j3Ox11STcLU4%211Vnm8&password_repeat=8rnmLfP%2A5ia5j3Ox11STcLU4%211Vnm8&email=susanhurst%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:27:47,613 - INFO] - Response status code='201', elapsed_time='0:00:00.231611'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:27:47,930 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 59' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=gary50&password=8rnmLfP%2A5ia5j3Ox11STcLU4%211Vnm8' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:27:47,930 - INFO] - Response status code='200', elapsed_time='0:00:00.272656'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjM4LCJ1c2VybmFtZSI6Imdhcnk1MCIsImV4cCI6MTc0MTk2NjA2NywiaWF0IjoxNzQxOTU4ODY3fQ.FKBZGK8fKaoLLwl8GqnpJRJYP0xlRlS6oYeVoO-mjXc9ss6ajz5ch_NKJZVYRDCo4dj8XUd08WFZNVMuQWJmPBkTJUkXjdIKFeBuftYQkC16Cs4DKy2y_LxgG5PD0c2wS6GQEHYKf1IbByWvy6gBWLo2vDWlLtnCfEznla1AwLWX5M-2kIjHrHNfnz0Xfqz5Nu43x4eBZrSCQ_q_M-wVNhNwdrYhLnqDvtyfXnwhn6YrH6IBR6m_SImsLSJVWXC4cGncEEVraFT82wD3UV7FlbfTXmkFLH-bvBP8njq9jhD4N1QfpoSMoaU1tT37t9IzW4BncLQ0P432DK3M1NfnxA",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:30:25,212 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 151' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=gomezerin&password=BRov%21JoTxJbRGTLE7%40RZZuz4F%248Tjf&password_repeat=BRov%21JoTxJbRGTLE7%40RZZuz4F%248Tjf&email=christopher87%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:30:25,212 - INFO] - Response status code='201', elapsed_time='0:00:00.231952'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:30:25,536 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 64' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=gomezerin&password=BRov%21JoTxJbRGTLE7%40RZZuz4F%248Tjf' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:30:25,536 - INFO] - Response status code='200', elapsed_time='0:00:00.263637'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjM5LCJ1c2VybmFtZSI6ImdvbWV6ZXJpbiIsImV4cCI6MTc0MTk2NjIyNSwiaWF0IjoxNzQxOTU5MDI1fQ.ZPQmc-0SpXBYBI9Gy91oxT5NtUHBmyjAJ4kA7NB8XjPTju1wvWIaa8msfNPoxVmpuhzmY91fGMK7kaFzvlA2eIJvh7ALHlFQfKNlaBTI_W-v1Zz9m1x6coCyx2y_cTJVYwu0Yd9e8E4w055bf_sh7S9OgyCXZKWWUc01CaNmjIa1pgvLYKtL4i9a9qF4UBSs1OjfViB3n4wf9Gpxh8YBb64GuC4VLn06ynHhsKYfTbh8dBAbMlSplH2kfOb2-D98nz_86fGxHhkvD4kCZ5wvoU842Mg0BQzyjPBQOE-VvB1zkyzp1WClQW2gv0jZs4uSoXjwFhatA5GESzm0af9upA",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:30:33,347 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 156' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=evelyn40&password=k2wTV8RqrZh%2BqjGy8%40%284%2AU6_Bpq%5E0h&password_repeat=k2wTV8RqrZh%2BqjGy8%40%284%2AU6_Bpq%5E0h&email=edwinwatson%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:30:33,348 - INFO] - Response status code='201', elapsed_time='0:00:00.231293'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:30:33,650 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=evelyn40&password=k2wTV8RqrZh%2BqjGy8%40%284%2AU6_Bpq%5E0h' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:30:33,651 - INFO] - Response status code='200', elapsed_time='0:00:00.261242'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQwLCJ1c2VybmFtZSI6ImV2ZWx5bjQwIiwiZXhwIjoxNzQxOTY2MjMzLCJpYXQiOjE3NDE5NTkwMzN9.osDUfDjUjUYqRUqlcfbJKua6imZj5wJ9_qVeR78blOpoSBM4L_t3Sz6uhJYGVS5R3iRUuS5uGd0qORvzPfcum98trwVWUhw9DIWqUDp3K5r5Z_uEPK9GopwATYYGBnGxyhveSDwpqvqK6pcX5ZA87_BK_bftr9pS35BQR3iXNZwduCN1byC39pr-3jNGSbJ6BcWIl5u2VetPGwINJHvtbaBxf8aVe6K_ZvmeLnG5rvTtPQZSkV3EcgXdMtE2RBqz0VcIFSY7gLnSy7w3UQiZe6OxrEALbSf0CDS2w2crFXEPg8QFgtSAPT68yh9YQ68MDghAfeYJEA_VFAn1vG-RBg",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:30:50,600 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 155' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=jasonfernandez&password=jSmEWvJ1%5E688R4esoGHoqxr%25vlu%2BFb&password_repeat=jSmEWvJ1%5E688R4esoGHoqxr%25vlu%2BFb&email=zavalaronald%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:30:50,601 - INFO] - Response status code='201', elapsed_time='0:00:00.231869'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:30:50,911 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=jasonfernandez&password=jSmEWvJ1%5E688R4esoGHoqxr%25vlu%2BFb' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:30:50,912 - INFO] - Response status code='200', elapsed_time='0:00:00.262908'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQxLCJ1c2VybmFtZSI6Imphc29uZmVybmFuZGV6IiwiZXhwIjoxNzQxOTY2MjUwLCJpYXQiOjE3NDE5NTkwNTB9.LTIM4NShh8ERQqr23E2N8mieR48HxtsxGzT03y8CucPXOoz5iVFU4rIGNMQ84Y2yQceMoA1hsRiMkaGuIEkXkFZ1crWRXqhSJKZnDCGquy8gAdM21O0cfN1cP_D9-p2ex9f6WxHsQlidRZA_9WjpguDJX7kpwGpMDcWzW3WndkjGyDEMab5pOlbQcCJmCmlU0priNRtCKLNc_ZCzFdWK1S2RHU07g4hfWyGB01s89hLL0O5hsfdS1WPfwePbVWRzZoB5nt-dNiltyH_SG6qmDVW6pm6JnRigTdSg2IEpO5aCY5Uie-uAAM-WdYK-7bb2AYUj6nKUcLO1ZkvOH7yr3w",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:31:29,655 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 155' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=anthonyspencer&password=xW4CSnQy%297_wD1%29IcBwSQ_L3%292lrm%2A&password_repeat=xW4CSnQy%297_wD1%29IcBwSQ_L3%292lrm%2A&email=ijackson%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:31:29,656 - INFO] - Response status code='201', elapsed_time='0:00:00.232425'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:31:29,972 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 71' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=anthonyspencer&password=xW4CSnQy%297_wD1%29IcBwSQ_L3%292lrm%2A' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:31:29,972 - INFO] - Response status code='200', elapsed_time='0:00:00.265003'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQyLCJ1c2VybmFtZSI6ImFudGhvbnlzcGVuY2VyIiwiZXhwIjoxNzQxOTY2Mjg5LCJpYXQiOjE3NDE5NTkwODl9.dcrX353oXi_JuqyMijB9iOnt7xYshzXMDAXAcrXrfZmb9jGGC8LA1SNFE03cBSd_qHALMdN1edidWRWCKbwv21o540ZpTmkwAA-jQZvU4-k1Gp9XX5eiMWtw3dlYJoQjrOiXZ0dhMK-NGXG2a5CHzVBpNHDSgRz422pki-OIAnBC_7EZIJ9Lxm3DVq3jDJ7bU7V4GhDJuBaWKMjIInlAmMFuR4X_TQV1VWTc9wSImoYBOKNdDCJc_b061q8UQdGvTn-ShZG2p8aF9w5WUI7rs0AKySAEiEVZxHA0iSeD7l6FMPxJoWbM-zH6NyhdHEiKsdKxAPUKLL8MXj_cxstDKA",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:33:02,970 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 149' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=maldonadojennifer&password=72Ix6yrAm9JZYKysa%21eNglORNPE7%401&password_repeat=72Ix6yrAm9JZYKysa%21eNglORNPE7%401&email=jason66%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:33:02,970 - INFO] - Response status code='201', elapsed_time='0:00:00.230905'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:33:03,273 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 70' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=maldonadojennifer&password=72Ix6yrAm9JZYKysa%21eNglORNPE7%401' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:33:03,274 - INFO] - Response status code='200', elapsed_time='0:00:00.260473'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQzLCJ1c2VybmFtZSI6Im1hbGRvbmFkb2plbm5pZmVyIiwiZXhwIjoxNzQxOTY2MzgzLCJpYXQiOjE3NDE5NTkxODN9.KixpEbsJPmhiyPpVc3CjTBTQ-CYw2SOWUmHley60o2ENB_rNaVDGFBeSW6qeCgn1DP6Vj9mSWoTDBuaj0JUrVFR7EGEefCm9ON3B2b-56zeN3PmVrumhHQoBdKq-VCg_xkmkd53Mxgn-W0i4vDXYMpxw0WTMw2HZebCyJi95hvot-A2odQOmmyHBbPZZpI3-NOPNguzFFM2J-pbSXESMz--ylnPqxPTu21DEjeiqWaYHEC-ToIp43PSiVq1_VeWwhpu2ap2SMvgGGiWxWAbX4M6oPChuQ-bCLVj6u5jWkU6w-vXesIGHmqixjn34b8b3tNcdxrxoZposp5PHvrOCpQ",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:35:16,428 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 146' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=lambertmichael&password=uTc3Rq%2Bn%257bPRKWe6pBDyrPgXCYvGS&password_repeat=uTc3Rq%2Bn%257bPRKWe6pBDyrPgXCYvGS&email=crogers%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:35:16,428 - INFO] - Response status code='201', elapsed_time='0:00:00.230932'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:35:16,733 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=lambertmichael&password=uTc3Rq%2Bn%257bPRKWe6pBDyrPgXCYvGS' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:35:16,734 - INFO] - Response status code='200', elapsed_time='0:00:00.261956'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ0LCJ1c2VybmFtZSI6ImxhbWJlcnRtaWNoYWVsIiwiZXhwIjoxNzQxOTY2NTE2LCJpYXQiOjE3NDE5NTkzMTZ9.Eno__uM4P6nLmplMgrI_8Lzngt8X2L02ljqZIHTiAvkEGX4-hVoWfxZVpK_h5XPYwzXgDTX-nZbN0AomqufccP0Wpe4m8UYtvuqU1f4ouMk_kbjwxQswX2DQFHL-0kR4n62QudxFLlaeX7uYAD5GsixzhEpOTA0JvAWL6FcwmBIVxp7lpeQX-_eqSVKBmKBl6RqdkDkjMjKw5rFeCPBBsXQXpSWbbkUUdSgKFYsJSAXZK_zIFgQuAypE0shxvfC4brbXZZK86Ikf4HObCWHKZIi930a72PXjlZ5GUTRT9im0o1_UoJAEoiHAi5JWtE2LY1hFrLsOOoNlw0lF7JT0aw",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:35:48,986 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 151' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=martineztony&password=E0go%2AGXr%24N7%24HUXD7bHihngau22w%24o&password_repeat=E0go%2AGXr%24N7%24HUXD7bHihngau22w%24o&email=dawn57%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:35:48,987 - INFO] - Response status code='201', elapsed_time='0:00:00.235108'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:35:49,288 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=martineztony&password=E0go%2AGXr%24N7%24HUXD7bHihngau22w%24o' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:35:49,288 - INFO] - Response status code='200', elapsed_time='0:00:00.259925'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ1LCJ1c2VybmFtZSI6Im1hcnRpbmV6dG9ueSIsImV4cCI6MTc0MTk2NjU0OSwiaWF0IjoxNzQxOTU5MzQ5fQ.TyZINt-jQbNNeWFuW8QxHN1eAWf8RFl0ZV7zplFAs8Q0k0oKlWKlxVl3Y_YotQKz-mxdcA-aYxCyzM_5zEJfut7Fg5xgeTuSkS6HIye3lVfpsDC42WyMQmjIaThWi8KnQy9nXFeNBfUrZ_KgWKMe_cx7S1N1sQLYs8yIq8N6mdEx3G9srFQpgM3cHhY3Okct8cTZ5N2BFj9suA-PDfCK4bfg8elUeTFoSg-MrLBVjvcu7AC2nyyQ3EP1myRIs9LtHjbJ5_f44GiLtqvxcxGsWlXVLghTPe97Q56lgYrjBhzUo4yEbcanhT-rrzzCozXhXaNVOBGTXo0CDvawir5UcA",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:36:37,759 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 155' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=annesmith&password=5N%28VDgalU%23pH2gK%26%40xL%28U2Ez%29tQ_Ag&password_repeat=5N%28VDgalU%23pH2gK%26%40xL%28U2Ez%29tQ_Ag&email=qcole%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:36:37,760 - INFO] - Response status code='201', elapsed_time='0:00:00.230546'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:36:38,069 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 70' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=annesmith&password=5N%28VDgalU%23pH2gK%26%40xL%28U2Ez%29tQ_Ag' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:36:38,069 - INFO] - Response status code='200', elapsed_time='0:00:00.261566'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ2LCJ1c2VybmFtZSI6ImFubmVzbWl0aCIsImV4cCI6MTc0MTk2NjU5NywiaWF0IjoxNzQxOTU5Mzk3fQ.MqwdLKJp9zvecJsGIdK78e8yuvNKKfMAbHlFc4TWSpfomq1dbT_-PPQVVaSW1go4ZknLttq152PEQYKhmtltz-NOPucHEBttztn7sqZOJ0WJ8M2CfGMvBvqiMaklGDLIk5rS8Uass51ebhpmM3K-g2V2bKB6av2622eYTfphjjvnRhQ4V56SYC1-B5j3-3u0LG6_6_8Q4Hm3dlIpv7hG51_1h345TWlUL4QruOYIFMi51LE-QwI4rdk_1xAiVpTjc8h9H4skN8NbRoC5HxTay12zXjXNjMFBUeWETyhAfAXXor3ZT68_dmXibjMp3gnXkrPVSIUUNDZJKN9uAtWkkw",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:37:24,941 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 153' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=griffithchase&password=m1d%2BZyws6F7IEW7zfMuhrJG%26Z%23akoQ&password_repeat=m1d%2BZyws6F7IEW7zfMuhrJG%26Z%23akoQ&email=harrispeggy%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:37:24,941 - INFO] - Response status code='201', elapsed_time='0:00:00.232950'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:37:25,245 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 68' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=griffithchase&password=m1d%2BZyws6F7IEW7zfMuhrJG%26Z%23akoQ' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:37:25,245 - INFO] - Response status code='200', elapsed_time='0:00:00.262214'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ3LCJ1c2VybmFtZSI6ImdyaWZmaXRoY2hhc2UiLCJleHAiOjE3NDE5NjY2NDUsImlhdCI6MTc0MTk1OTQ0NX0.Igpjo8l9PnoDVetPB5tvrMtaHQ4-wYEniMzoHr9MMiCG2WaezuMmHUZtLlY5RR2jCNjNb56Sqj_dTYxXaAb841E1iSwF8hJTT7VyDpbqMA-n9AveMstFJpg8tGpC4NVwbExxDXkoFCcV1Syfk5slaCmY6xiyzwP9NPjgsXXnS7_H9Zi7XF7idOe3x63pmM9sCSqoqvSwPhwLWYzGu2OLqySV81fsgkU5z1DJhSFg6nxrnIHuW4rgNvDWfbUCr1K1Gf6iUptQouVqXVGBvZCCzIXW6XNjLUlBoUjgWPBGIZjdzdQAVmlmwcDUvCm3VD8oCtNQjUYlJYaUGqPnQ24plw",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:37:41,756 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 155' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=monica40&password=6_ScB%5EXbqWf%25JQy5E%28q0%29KkJk77l4J&password_repeat=6_ScB%5EXbqWf%25JQy5E%28q0%29KkJk77l4J&email=jacksonrichard%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:37:41,757 - INFO] - Response status code='201', elapsed_time='0:00:00.231762'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:37:42,074 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 65' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=monica40&password=6_ScB%5EXbqWf%25JQy5E%28q0%29KkJk77l4J' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:37:42,074 - INFO] - Response status code='200', elapsed_time='0:00:00.275330'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ4LCJ1c2VybmFtZSI6Im1vbmljYTQwIiwiZXhwIjoxNzQxOTY2NjYyLCJpYXQiOjE3NDE5NTk0NjJ9.AhPCknzcX2gTNBCsOGvj6HhGYl-j4ldYsESFO8wG7KyEZasYUatJTQB2dmYS2BjIDvVi6uGA0Z-ZCMpRXTs9Cnm59vC59IyRzhZ73AJPFGzNbTTjzLc2ORBkGq_CVoAjqhS1lAu9Afqj1QaCwyAyO-adOMhBSLl7R_m7700gB9WQGblryh3TeF0K2tRAGP_FYHHIScFA0xYc9xEHbI6JRy4rPLkGSPn1Rq7emaYGywOkcBwsESLPfslzPdEwZ80F1wiRQW_TbTlxZfeYE268QiXe1s56ahNUPy-xf9GCdQMHmyFOuqrygUbU7OGdLtL1TXCeRKqhgJaDdrM_-gb-Uw",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:44:11,759 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 155' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=mchavez&password=F%23XMl8%2A%2BX95xq%2AJ_MG%40C3GIo%26iLSMl&password_repeat=F%23XMl8%2A%2BX95xq%2AJ_MG%40C3GIo%26iLSMl&email=xwilson%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:44:11,760 - INFO] - Response status code='201', elapsed_time='0:00:00.230476'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:44:12,072 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 68' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=mchavez&password=F%23XMl8%2A%2BX95xq%2AJ_MG%40C3GIo%26iLSMl' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:44:12,073 - INFO] - Response status code='200', elapsed_time='0:00:00.263231'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQ5LCJ1c2VybmFtZSI6Im1jaGF2ZXoiLCJleHAiOjE3NDE5NjcwNTIsImlhdCI6MTc0MTk1OTg1Mn0.iOvYfjhh65NysCsFg12eEaa8vtEqTwO96AnQ24-kZYDmn_J25rOfPSTDlUN3_EZe_Oe5eaTrnczLCwOb_Ka_EwSuAnWCCYz7AYlr2Nf7UiPg0UX-DOCuR8IcjWU_O1JPV1j3vpwHYBOJoX3KrhkpvFmz_B5HZHQM-2pyKueVfkJCuy7TI9JqpVdeJkUMGFp3js1c99On1BugATVqsoTvLw2Wml5rf3NKxND7YIeRuVIZ5Ff92ZoxVgqu1CdBtyceehpponR_UEBWhoFBuFIgOeXpMxTpDwMXtWxqEPEfKkSun803cTe_FlzNGCjKBdzjySkxEvddcmC7edbaIh2yAA",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:44:17,440 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 155' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=owensmegan&password=%23%2BP%26IBatt%40IuNSaQ9yvPCDvnfkf4a%24&password_repeat=%23%2BP%26IBatt%40IuNSaQ9yvPCDvnfkf4a%24&email=cnichols%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:44:17,441 - INFO] - Response status code='201', elapsed_time='0:00:00.232785'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:44:17,744 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 69' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=owensmegan&password=%23%2BP%26IBatt%40IuNSaQ9yvPCDvnfkf4a%24' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:44:17,744 - INFO] - Response status code='200', elapsed_time='0:00:00.261378'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUwLCJ1c2VybmFtZSI6Im93ZW5zbWVnYW4iLCJleHAiOjE3NDE5NjcwNTcsImlhdCI6MTc0MTk1OTg1N30.fgg0yUsVC1d-e5OZuxrinYcMZYdkcvHihbBJQP2vrvKOxvnQipqqnDGSUOwuOf6tZLqP6MhJEnCdUHTVBTUA7i_Mkx2z3pEV54-HDriLGVwv5SQPS0ClcxWirDK9se0mrWBZ_kgfvRUDlhKfKWqK0w6wL4XCKG5EGsC004gLSsIxQ7rHgu_JsAUEISr9j3x_F-4UoedQ08E51H7kCvx27AbdpiMhBjyas8aNqun1tZ-sJAHKTHvUU-nBmPSnPz6bHAg_FOm_i2psYC3Q_d9A9k9-wCcQ8WLtBKpQ0LRBydO84vLHeI5g2vh8gLg0rIFfbn5SqoJV2VlRQhPA_iA09g",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:47:14,005 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 163' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=michelle66&password=X%407%2ADIcC%28%24zrMzGB60%24GrR4H%26wrY5S&password_repeat=X%407%2ADIcC%28%24zrMzGB60%24GrR4H%26wrY5S&email=duncanmariah%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:47:14,005 - INFO] - Response status code='201', elapsed_time='0:00:00.232081'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:47:14,315 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 71' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=michelle66&password=X%407%2ADIcC%28%24zrMzGB60%24GrR4H%26wrY5S' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:47:14,316 - INFO] - Response status code='200', elapsed_time='0:00:00.260741'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUxLCJ1c2VybmFtZSI6Im1pY2hlbGxlNjYiLCJleHAiOjE3NDE5NjcyMzQsImlhdCI6MTc0MTk2MDAzNH0.d-T87dATiPxc9ll7ZDAK8Nf3nkCFQKQyDBjBwqU-oCQvjm7tI-MIYOIlDUfMkbgrPeQaiVSkmNoziil_BzLqd0kykOsqZsYPdN7u6TrelPLDi8wQxyYNrz2RZXW7RfAqyX1yKQXtMgg72wJOmIOF6VkkoaGTQr0xSQwEmIgq02YRrR0sB8kccTCFrG6XVhtG61cv8B5A0v81Nzbv5I57Q7iWt20P4lECcGYjckR9cYJInVjVFu9UVXdny34Y5Vh5xmzlqVB2zCcHk9ptPULTnfcARTjifXc1CfQBKXT_IDLOro92O63s4QuUocKsSVvnzuFwSA_ioOmXIkOTjZ_Wyg",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:47:33,139 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 165' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=butlerjeffrey&password=9H%25Rh3XgOQ%26oPQ9vS%24%28%28jtcoJbZ14q&password_repeat=9H%25Rh3XgOQ%26oPQ9vS%24%28%28jtcoJbZ14q&email=fosterelizabeth%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:47:33,140 - INFO] - Response status code='201', elapsed_time='0:00:00.231586'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:47:33,441 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 72' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=butlerjeffrey&password=9H%25Rh3XgOQ%26oPQ9vS%24%28%28jtcoJbZ14q' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:47:33,441 - INFO] - Response status code='200', elapsed_time='0:00:00.260041'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUyLCJ1c2VybmFtZSI6ImJ1dGxlcmplZmZyZXkiLCJleHAiOjE3NDE5NjcyNTMsImlhdCI6MTc0MTk2MDA1M30.OBMxI9l27f7NwdpgV9IQmtKafHO-76aw311A_e2d4BrQl_fAzLaO8nQIaPYrPC69VtnDclRhlthr7gjbwGpMbAExCPk9nkGJokd92a4ApI4xNwZiaHn3DrvXiexn80PZ6Fu4lfV_Xf3BmSsnTMKWhKPtiSK9Qy508SLGLnR2BA23RgR0CZleN31_2lmsxT8tYqWu_NHCLYkXixb7geF-7sW8DNqlF5J0WGb2eap5MzYfh4a3t9GDjLUnBlcuZfyqjcLu9eQO9LQ-vGN-1ZpnOLUeltnLFOw4e7lrbacIvsnHTyFyfVx5a6rAQBwgS4bBpyc-60WIJ69VTy-LgAIGjQ",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:47:40,575 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 156' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=rogersvanessa&password=1R%40V5X%2B_t%2A6kOb2N1tkAYiPCg_h%242M&password_repeat=1R%40V5X%2B_t%2A6kOb2N1tkAYiPCg_h%242M&email=talexander%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:47:40,575 - INFO] - Response status code='201', elapsed_time='0:00:00.231610'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:47:40,880 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 70' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=rogersvanessa&password=1R%40V5X%2B_t%2A6kOb2N1tkAYiPCg_h%242M' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:47:40,881 - INFO] - Response status code='200', elapsed_time='0:00:00.259952'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUzLCJ1c2VybmFtZSI6InJvZ2Vyc3ZhbmVzc2EiLCJleHAiOjE3NDE5NjcyNjAsImlhdCI6MTc0MTk2MDA2MH0.CsSaoek9QILYoyMlw72CuTp-hESm1GPFwc4uRK3F6ALLmRQ2CWg0r56R6XEEsjDn15ziU6GWJXxUtlNABJOl8N3C_8hykfdJRcAvqxqFO7cxP5CjSBYhcXkp0GIUxRS-gHopns9X6nv47U6704O4yp2UEQvUbRf_iRKT4V5kHTRNw9W9opuMM_ay0_PdrN4amEkzH4Ok3VrLgRJFTx_WoZxZPOaFG9BqzwAZxXA2GAFgh4UMRcr8goyyEB4BYbBFLRHbpsom8cBG8Zpbtl7WBc07HA2ibRtcrJdEKaOdfPeoJdftQ1BzE-N6OlroOFMdkTUGRheBZuJLS83HnWvDdw",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:51:09,352 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 167' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=lopezcarrie&password=Ls%24r%21%2BMy%2B%24aP%2BelfeK41%2A5Evf60mOs&password_repeat=Ls%24r%21%2BMy%2B%24aP%2BelfeK41%2A5Evf60mOs&email=smithmorgan%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:51:09,353 - INFO] - Response status code='201', elapsed_time='0:00:00.230427'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:51:09,664 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 74' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=lopezcarrie&password=Ls%24r%21%2BMy%2B%24aP%2BelfeK41%2A5Evf60mOs' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:51:09,665 - INFO] - Response status code='200', elapsed_time='0:00:00.267295'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjU0LCJ1c2VybmFtZSI6ImxvcGV6Y2FycmllIiwiZXhwIjoxNzQxOTY3NDY5LCJpYXQiOjE3NDE5NjAyNjl9.YORSHbaxyri6jwmAp4RDUu75QsgEfDlMMnfSWD9UOR_2TCaeebEVpLud0-CiShjUE7mVKZjOdQVG7QhNFGsxlkWSHIdCSrEcTbut67olozss-Yt7mxFJIZ3m70RJl0OxR0-kGn6B5-xssWSYQJL8Mr0YdKY8NczzK30uN3nSgQpMwfkWwiAyOEgZ3FVo7OwAXZBaExB-UxAXsiNgh4TipR0zZKh2FSQhlh9fmdRkFhvo5Tayw406jIuqsHCUWks2ZUpSCkKI5wxItdGKPMfueACKbJSMJT4f4NqsVuFAODkFy9xLtVGVW90CmxPr5ro9KGp6gpXhWWhHmvBfqaBAPA",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:51:58,134 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 162' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=lopezkevin&password=AP_%40%21%5EKH3mtdaSL%40jQYSETZ%2A2_R%212i&password_repeat=AP_%40%21%5EKH3mtdaSL%40jQYSETZ%2A2_R%212i&email=sandersleah%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:51:58,134 - INFO] - Response status code='201', elapsed_time='0:00:00.231484'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:51:58,446 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 71' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=lopezkevin&password=AP_%40%21%5EKH3mtdaSL%40jQYSETZ%2A2_R%212i' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:51:58,447 - INFO] - Response status code='200', elapsed_time='0:00:00.270495'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjU1LCJ1c2VybmFtZSI6ImxvcGV6a2V2aW4iLCJleHAiOjE3NDE5Njc1MTgsImlhdCI6MTc0MTk2MDMxOH0.HIjg3SiKd6nll0Wa3TIp1MJZhr0dInkgJXeodd3ObwrU1_YgKyy6RPqyrbAKbvjOqzo5qTzo91nzZ6ymMHp2NNXbq6I-oncBctoasKmdP7QVUI4v7mQgh6RB0c5-wMGXd5a8baI_zgyd47jAJ_bFHMW4c_tyJSZNx-OxGA9COLs0eMegufNvuxA9XKqQPFdJpvTYllZdqq3uf0Tyo2Mz5-TL1DkL3UekW-xcXKIU00p5NOZmGq-kVObrC6r2WFyTAsKHQ26Ed11qF7lr9rjVi8IQ81pcxAXIeaXiYBxaUnxw-rrw1mfdzC4QgOi-kmF-LAb8jfjVr1b9nAg5VsYuZg",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:53:58,614 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 153' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=oliviayoung&password=%5E8C%40GmVSkThYbGsu2eN%23E%25c9mYaLxV&password_repeat=%5E8C%40GmVSkThYbGsu2eN%23E%25c9mYaLxV&email=jasonodom%40example.com' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:53:58,614 - INFO] - Response status code='201', elapsed_time='0:00:00.229988'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:53:58,924 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 68' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=oliviayoung&password=%5E8C%40GmVSkThYbGsu2eN%23E%25c9mYaLxV' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:53:58,924 - INFO] - Response status code='200', elapsed_time='0:00:00.263162'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjU2LCJ1c2VybmFtZSI6Im9saXZpYXlvdW5nIiwiZXhwIjoxNzQxOTY3NjM4LCJpYXQiOjE3NDE5NjA0Mzh9.GQ6tn3dZHEWSBn3CU4EdvB7h1DCQk_8WLVpKESCZv468J9-6n3m7BfrtaLYinEJH2dqi9UJpA3UTFXPLK6qBmY3Tk38XJjrFgsMYrRmmJ0F5QfjeGMHdug1dx1SWuD-3VoldrPBfy-y4m3OT85z8_sew40w6MQr3NrUCkdk0nDs92B3yul0-7DCWwmcRT_ZdX0tavfAThZZKwT5NEmwF-8lNpitPcK-DRb78oD4K5s6E1SdslGIyLH1TgN3cr89wVWxxw2wMUpjh6CdeiMHYN4Ezeo7sL1poosNP_Pw2IopZRpeqBmJRc7hJoU4wAWYHYEjjlINey5_pyZraIoFDTw",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:56:23,583 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 174' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=ewest&password=38d%2ADD%23o%26Z%26r%5EC%248M%24X%5E%26X%26Lh%28pEk0&password_repeat=38d%2ADD%23o%26Z%26r%5EC%248M%24X%5E%26X%26Lh%28pEk0&email=daniel34%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:56:23,583 - INFO] - Response status code='201', elapsed_time='0:00:00.230237'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:56:23,888 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 76' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=ewest&password=38d%2ADD%23o%26Z%26r%5EC%248M%24X%5E%26X%26Lh%28pEk0' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:56:23,889 - INFO] - Response status code='200', elapsed_time='0:00:00.260711'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjU3LCJ1c2VybmFtZSI6ImV3ZXN0IiwiZXhwIjoxNzQxOTY3NzgzLCJpYXQiOjE3NDE5NjA1ODN9.O2E8S7xJtgoVL7Vt1nriYhtjfWpVWmHxJl4wAOkz8hoKV0ukKggv1Q5IxASBnW4TLvuLjRrG6FjMYaySJj6I96ARJUL-6Njckknn6HEaL6s8OHZ95ZlOCyCIuXOlO96JmZbTA1-MyvmmJI3x021NviUQZYwrmjraLySL2-eYHesZl_aiV3uCRhGhKNQY79W2ZFcMcgm19x3xjHdiXlHxkE8IkedazdQjUEJ1vyTR4or8n88WowJZ5qB0u52xGyrj9Ors8sP-diPKXlw-DMT0DhU-lgvwij2e-zzqVwtyS0pQtk8qi13emU_8I0fnCfS_YNcMqAmboU6ppYewXqtWnA",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 16:59:34,050 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 157' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=shawnahale&password=3nvdG%29X4%25R0bV%29IQYofuvqB%261%23vdl%25&password_repeat=3nvdG%29X4%25R0bV%29IQYofuvqB%261%23vdl%25&email=jill15%40example.net' http://127.0.0.1:8000/auth/register/
+[2025-03-14 16:59:34,052 - INFO] - Response status code='201', elapsed_time='0:00:00.234556'
+
+{
+  "detail": "User registered"
+}
+
+[2025-03-14 16:59:34,359 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 71' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=shawnahale&password=3nvdG%29X4%25R0bV%29IQYofuvqB%261%23vdl%25' http://127.0.0.1:8000/auth/login/
+[2025-03-14 16:59:34,359 - INFO] - Response status code='200', elapsed_time='0:00:00.259006'
+
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjU4LCJ1c2VybmFtZSI6InNoYXduYWhhbGUiLCJleHAiOjE3NDE5Njc5NzQsImlhdCI6MTc0MTk2MDc3NH0.me1iVJLULDb1IRBjo4EfcSFZHFJ2M2CJWjiy9YFJ32gdivfIlvTN8RWRRw-Ccd-4Yv7j65dPOx5xbPnTw37t2_SFsiN66B9Ods5_m-r_Fg3_SJErsGD88wWdDewSW5EiYrK0qwlcXVYRUlbS-BpeHzFc_4TrBUKvBJf0B4eSw8nP2us6_ZEBj8i4fAxOozv893cJ7skeKoumsjKjg_xyHRBex3Qf3Ogn3hEPl029laVOYempw1f-BExfdbWk953I8qb7GjZQg33dB1C9x_1dVRSTdNaPIurieszR4DCZrT0MmQXidZaNHO4HzIqcb5RYEiE1tIvZBxbcVbGOeNGdYA",
+  "token_type": "Bearer"
+}
+
+[2025-03-14 17:06:30,686 - INFO] - Request: curl -X POST -H 'Accept: */*' -H 'Accept-Encoding: gzip, deflate' -H 'Connection: keep-alive' -H 'Content-Length: 157' -H 'Content-Type: application/x-www-form-urlencoded' -H 'User-Agent: python-requests/2.32.3' -d 'username=lmitchell&password=G_S%2B2sD%5EAoz0zd%408QbkHz%2Ayi%40V5eU5&password_repeat=G_S%2B2sD%5EAoz0zd%408QbkHz%2Ayi%40V5eU5&email=danielhicks%40example.org' http://127.0.0.1:8000/auth/register/
+[2025-03-14 17:06:30,687 - INFO] - Response status code='201', elapsed_time='0:00:00.230898'
+
+{
+  "detail": "User registered"
+}
+
