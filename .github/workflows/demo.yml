@@ -63,6 +63,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Build Docker Image
+        run: |
+          docker buildx build -t test-image -f Dockerfile .
+
       - name: Run tests inside Docker
         run: |
           docker run --network my-network test-image pytest ./tests/test_grade_stats.py
