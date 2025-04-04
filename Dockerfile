@@ -8,4 +8,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["pytest", "./test_grade_stats.py"]
+EXPOSE 5000
+
+CMD ["pytest", "tests/test_grade_stats.py"]
