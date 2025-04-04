@@ -53,11 +53,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install Allure
+      - name: Install dependencies
         run: |
-          sudo apt-get install allure
+          sudo apt-get update
+          sudo apt-get install -y openjdk-11-jdk wget unzip
+          wget -O allure.zip https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.8/allure-commandline-2.13.8.zip
+          unzip allure.zip -d /opt/allure
+          sudo ln -s /opt/allure/allure-2.13.8/bin/allure /usr/bin/allure  
 
       - name: Generate Allure report
         run: |
           allure generate ./results --clean
+
+      - name: Publish Allure report
+        run: |
+          allure open ./results
 
