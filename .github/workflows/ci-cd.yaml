@@ -65,7 +65,9 @@ jobs:
         run: |
           allure generate ./results --clean
 
-      - name: Publish Allure report
-        run: |
-          allure open ./results
+      - name: Archive Allure report
+        uses: actions/upload-artifact@v3
+        with:
+          name: allure-report
+          path: ./results
 
