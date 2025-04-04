@@ -17,8 +17,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
-           python -m pip install --upgrade pip
-           pip install ruff
+          python -m pip install --upgrade pip
+          pip install ruff
 
       - name: Run Ruff Linter
         run: ruff .
@@ -36,11 +36,11 @@ jobs:
 
       - name: Build Docker image
         run: |
-            docker build -t my-test-container-image -f app/Dockerfile .
+          docker build -t my-test-container-image -f app/Dockerfile .
 
       - name: Start Docker Compose
         run: |
-            docker-compose up -d
+          docker-compose up -d
 
       - name: Wait for service to be ready
         run: |
