@@ -1,15 +1,11 @@
-version: '3.8'
+version: '3'
 
 services:
-  my_service_1:
-    image: mekidmetal/university-service:latest
-    networks:
-      - my_network
-
-  my_service_2:
-    image: mekidmetal/auth-service:latest
-    networks:
-      - my_network
-
-networks:
-  my_network:
+  bot:
+    image: ${IMAGE_REF}
+    container_name: globe
+    restart: always
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    ports:
+      - "8501:8501"
