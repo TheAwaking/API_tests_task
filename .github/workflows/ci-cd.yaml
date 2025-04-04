@@ -45,7 +45,6 @@ jobs:
           push: true
           tags: sky34/test-app:latest
 
-
   report:
     runs-on: ubuntu-latest
     needs: build
