@@ -26,6 +26,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    needs: linter
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -60,8 +61,3 @@ jobs:
         run: |
           allure generate ./results --clean
 
-      - name: Deploy Allure report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./allure-report
