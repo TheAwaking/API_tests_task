@@ -3,13 +3,12 @@ name: Generate_Report
 on:
   workflow_run:
     workflows: [Run_Tests]
-    types:
-      - completed
+    types: [completed]
 
 jobs:
   report:
     runs-on: ubuntu-latest
-    needs: build
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2

@@ -3,12 +3,12 @@ name: Run_Tests
 on:
   workflow_run:
     workflows: [Demo_Workflow]
-    types:
-      - completed
+    types: [completed]
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Checkout code
