@@ -2,8 +2,9 @@ name: Generate_Report
 
 on:
   workflow_run:
-    workflows: [Run_Tests]
-    types: [completed]
+    workflows: ["Run_Tests"]
+    types:
+      - completed
 
 jobs:
   report:

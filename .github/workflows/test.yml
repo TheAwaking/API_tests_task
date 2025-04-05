@@ -2,8 +2,9 @@ name: Run_Tests
 
 on:
   workflow_run:
-    workflows: [Demo_Workflow]
-    types: [completed]
+    workflows: ["Demo_Workflow"]
+    types:
+      - completed
 
 jobs:
   test:
