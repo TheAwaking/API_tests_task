@@ -1,8 +1,8 @@
-name: Generate Report
+name: Generate_Report
 
 on:
   workflow_run:
-    workflows: [ "Run Tests" ]
+    workflows: [ "Run_Tests" ]
     types:
       - completed
 
