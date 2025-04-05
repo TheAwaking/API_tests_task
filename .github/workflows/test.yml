@@ -1,8 +1,9 @@
-name: Run_Tests
+name: Tests
 
 on:
+  workflow_dispatch:
   workflow_run:
-    workflows: ["Demo_Workflow"]
+    workflows: [Workflow]
     types:
       - completed
 
