@@ -2,7 +2,7 @@ name: Generate_Report
 
 on:
   workflow_run:
-    workflows: [ "Run_Tests" ]
+    workflows: [Run_Tests]
     types:
       - completed
 
