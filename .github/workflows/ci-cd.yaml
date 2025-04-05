@@ -22,7 +22,7 @@ jobs:
 
       - name: Run Ruff Linter
         run: |
-          ruff check tests/test_grade_stats.py  # только для этого запуска, чтобы не проверял весь код
+          ruff check tests/test_grade_stats.py
 
   build:
     runs-on: ubuntu-latest
